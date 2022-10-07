@@ -1,0 +1,33 @@
+@mixin flex($flex, $ai, $jc, $d: row) {
+  display: $flex;
+  align-items: $ai;
+  justify-content: $jc;
+
+  @if ($d == column) {
+    flex-direction: column;
+  }
+}
+
+@mixin font($fw, $fs, $lh) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: calc($lh / $fs);
+}
+
+$breakpoints: (
+  'mobile': 480px,
+  'tablet': 768px,
+  'desktop': 1200px,
+);
+
+@mixin media($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}

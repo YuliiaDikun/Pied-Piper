@@ -26,10 +26,7 @@
   @include flex(flex, center, end);
 
   margin-bottom: 38px;
-
-  &__item:not(:first-child) {
-    margin-left: 27px;
-  }
+  gap: 27px;
 }
 .footer-address {
   font-style: normal;
@@ -46,7 +43,7 @@
   }
 }
 .copyright {
-  border-top: 1px solid #e1e1e1;
+  border-top: 1px solid $BorderColor;
   padding-top: 16px;
 
   &__text {

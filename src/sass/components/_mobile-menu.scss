@@ -1,9 +1,7 @@
 .menu-toggle {
   min-height: 32px;
   min-width: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex(flex, center, center);
 
   margin: 0 0 0 auto;
 
@@ -54,6 +52,7 @@
   @include flex(flex, center, center, column);
   gap: 32px;
   margin: 0;
+  margin-top: 47px;
   margin-bottom: auto;
   list-style: none;
 }
@@ -61,15 +60,13 @@
 .mobile-menu .mobile__link {
   display: block;
   padding: 10px;
-  color: $PrimaryTextColor;
+  color: $SecondaryWhiteColor;
   text-decoration: none;
 
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 39px;
+  @include font(700, 32px, 39px);
 
   &.current {
-    color: var(--main-blue);
+    color: $PrimaryTextColor;
   }
 }
 

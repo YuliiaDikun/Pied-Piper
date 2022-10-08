@@ -1,0 +1,64 @@
+.hero__section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 61px;
+  padding-bottom: 245px;
+
+  background-color: $BackgroundMainColor;
+}
+
+.hero__title {
+  width: 247px;
+  height: auto;
+
+  margin-bottom: 32px;
+
+  color: $SecondaryWhiteColor;
+
+  font-family: 'Seymour One';
+  font-size: 26px;
+  line-height: 1.27;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero__passion {
+  font-size: 34px;
+  line-height: 96.5%;
+}
+
+.hero__buttons {
+  display: block;
+  flex-direction: row;
+  gap: 8px;
+  //   outline: 2xp solid blueviolet;
+  //   border: 2xp solid tomato;
+}
+
+.hero__single-button {
+  box-sizing: border-box;
+  height: 20px;
+  width: auto;
+  padding: 0 11px;
+  background-color: transparent;
+  //   border-style: solid;
+  border: 2xp solid tomato;
+  border-radius: 4px;
+  cursor: pointer;
+
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 0.8;
+}
+
+.single-button__1 {
+  border: 2xp solid #f8d24e;
+}
+
+.single-button__2 .button__text {
+  border: 2xp solid $BackgroundMainColor;
+  color: $AccentColor;
+  text-decoration: underline;
+}

@@ -11,7 +11,7 @@
 
   &__paragraph {
     @include font(700, 18px, 22px);
-    max-width: 232;
+    max-width: 238px;
     margin-bottom: 16px;
   }
 
@@ -52,6 +52,6 @@
     margin: 0 auto;
 
     color: $FooterTextColor;
-    max-width: 150px;
+    max-width: 170px;
   }
 }

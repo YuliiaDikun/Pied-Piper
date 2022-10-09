@@ -43,7 +43,8 @@
   padding: 0 11px;
   background-color: transparent;
   //   border-style: solid;
-  border: 2xp solid tomato;
+  // border: 2xp solid tomato;
+  border: 2px solid $AccentColor;
   border-radius: 4px;
   cursor: pointer;
 
@@ -53,12 +54,12 @@
   line-height: 0.8;
 }
 
-.single-button__1 {
-  border: 2xp solid #f8d24e;
-}
+// .single-button__1 {
+//   border: 2px solid $AccentColor;
+// }
 
-.single-button__2 .button__text {
-  border: 2xp solid $BackgroundMainColor;
+.single-button__2 {
+  border: 2px solid $BackgroundMainColor;
   color: $AccentColor;
   text-decoration: underline;
 }

@@ -13,13 +13,25 @@
     @include font(700, 18px, 22px);
     max-width: 232;
     margin-bottom: 16px;
+    // ----------------------tablet------------------
+    @include media('tablet') {
+      @include font(700, 26px, 32px);
+      letter-spacing: 0.04em;
+      max-width: 352px;
+    }
   }
 
   &__header {
     letter-spacing: 0.04em;
-
     @include font(700, 34px, 41px);
+
     max-width: 200px;
+    // ----------------------tablet------------------
+    @include media('tablet') {
+      @include font(700, 48px, 59px);
+      letter-spacing: 0.06em;
+      max-width: 352px;
+    }
   }
 }
 
@@ -28,6 +40,11 @@
 
   margin-bottom: 38px;
   gap: 27px;
+  // --------------------tablet---------------------------
+  @include media('tablet') {
+    margin-bottom: 32px;
+    gap: 30px;
+  }
 }
 
 .footer-address {
@@ -36,7 +53,12 @@
 
   @include flex(flex, center, end);
   margin-bottom: 40px;
-
+  // ----------------------tablet------------------
+  @include media('tablet') {
+    @include font(700, 14px, 26px);
+    letter-spacing: 0.02em;
+  }
+  // ----------------------------------------------
   &__text {
     color: $PrimaryTextColor;
   }
@@ -55,5 +77,26 @@
 
     color: $FooterTextColor;
     max-width: 150px;
+    // ---------------------------tablet----------------------
+    @include media('tablet') {
+      letter-spacing: 0.02em;
+      max-width: 300px;
+    }
   }
+}
+.footer__container {
+  @include media('tablet') {
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+  }
+}
+.footer__wrapper {
+  @include media('tablet') {
+    margin-top: 66px;
+  }
+}
+// ----------------footer-icons----------------------
+.footer-socials__icon {
+  fill: yellow;
 }

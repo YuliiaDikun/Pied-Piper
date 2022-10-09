@@ -1,0 +1,57 @@
+.footer {
+  background-color: $BackgroundMainColor;
+
+  padding-bottom: 62px;
+}
+.footer-banner {
+  text-transform: uppercase;
+  color: $SecondaryWhiteColor;
+
+  margin-bottom: 42px;
+
+  &__paragraph {
+    @include font(700, 18px, 22px);
+    max-width: 232;
+    margin-bottom: 16px;
+  }
+
+  &__header {
+    letter-spacing: 0.04em;
+
+    @include font(700, 34px, 41px);
+    max-width: 200px;
+  }
+}
+.footer-socials {
+  @include flex(flex, center, end);
+
+  margin-bottom: 38px;
+  gap: 27px;
+}
+.footer-address {
+  font-style: normal;
+  @include font(700, 12px, 22px);
+
+  @include flex(flex, center, end);
+  margin-bottom: 40px;
+
+  &__text {
+    color: $PrimaryTextColor;
+  }
+  &__tel {
+    color: $SecondaryWhiteColor;
+  }
+}
+.copyright {
+  border-top: 1px solid $BorderColor;
+  padding-top: 16px;
+
+  &__text {
+    @include font(700, 14px, 21px);
+    text-align: center;
+    margin: 0 auto;
+
+    color: $FooterTextColor;
+    max-width: 150px;
+  }
+}

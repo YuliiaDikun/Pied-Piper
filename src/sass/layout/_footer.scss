@@ -22,12 +22,14 @@
     max-width: 200px;
   }
 }
+
 .footer-socials {
   @include flex(flex, center, end);
 
   margin-bottom: 38px;
   gap: 27px;
 }
+
 .footer-address {
   font-style: normal;
   @include font(700, 12px, 22px);

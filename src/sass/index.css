@@ -1,6 +1,4 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
-@import url("https://fonts.googleapis.com/css2?family=Seymour+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -11,21 +9,19 @@
   padding: 0;
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   margin: -1px;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 *,
 *::before,
 *::after {
   padding: 0;
   margin: 0;
+  border: 0;
 }
-
 h1,
 h2,
 h3,
@@ -36,42 +32,35 @@ p {
   margin: 0;
   padding: 0;
 }
-
 a,
 a:visited {
   text-decoration: none;
 }
-
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
 .container {
   width: 320px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
 }
-
 .header {
   display: flex;
   padding-top: 12px;
   background-color: #84a278;
 }
-
 .header__logo {
   width: 40px;
   height: 37px;
 }
-
 .menu-toggle {
   display: flex;
   align-items: center;
@@ -80,61 +69,4 @@ ul {
   background-color: transparent;
   cursor: pointer;
   border: none;
-}
-
-.hero__section {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  padding-top: 61px;
-  padding-bottom: 245px;
-  background-color: #84a278;
-}
-
-.hero__title {
-  width: 247px;
-  height: auto;
-  margin-bottom: 32px;
-  color: #fcfcfc;
-  font-family: "Seymour One";
-  font-size: 26px;
-  line-height: 1.27;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.hero__passion {
-  font-size: 34px;
-  line-height: 96.5%;
-}
-
-.hero__buttons {
-  display: block;
-  flex-direction: row;
-  gap: 8px;
-}
-
-.hero__single-button {
-  box-sizing: border-box;
-  height: 20px;
-  width: auto;
-  padding: 0 11px;
-  background-color: transparent;
-  border: 2xp solid tomato;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: "Montserrat";
-  font-weight: 600;
-  font-size: 8px;
-  line-height: 0.8;
-}
-
-.single-button__1 {
-  border: 2xp solid #f8d24e;
-}
-
-.single-button__2 .button__text {
-  border: 2xp solid #84a278;
-  color: #f8d24e;
-  text-decoration: underline;
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */

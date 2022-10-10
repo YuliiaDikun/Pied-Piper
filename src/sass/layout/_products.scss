@@ -140,7 +140,7 @@
     background-color: $IceCreamColor;
 
     padding-top: 124px;
-    padding-bottom: 40x;
+    padding-bottom: 40px;
     padding-left: 40px;
     padding-right: 40px;
 
@@ -151,7 +151,7 @@
         padding-top: 110px;
         padding-left: 26px;
         padding-right: 26px;
-        padding-bottom: 40x;
+        padding-bottom: 40px;
     }
 
     @include media ('desktop'){
@@ -160,7 +160,7 @@
         padding-top: 166px;
         padding-left: 60px;
         padding-right: 60px;
-        padding-bottom: 40x;
+        padding-bottom: 40px;
     }    
 
 
@@ -237,7 +237,7 @@
     background-color: $IceCoffeeColor;
 
     padding-top: 124px;
-    padding-bottom: 40x;
+    padding-bottom: 40px;
     padding-left: 40px;
     padding-right: 40px;
 
@@ -248,7 +248,7 @@
         padding-top: 110px;
         padding-left: 26px;
         padding-right: 26px;
-        padding-bottom: 40x;
+        padding-bottom: 40px;
     }
 
     @include media ('desktop'){
@@ -257,7 +257,7 @@
         padding-top: 166px;
         padding-left: 60px;
         padding-right: 60px;
-        padding-bottom: 40x;
+        padding-bottom: 40px;
     }    
 
 
@@ -334,7 +334,7 @@
     background-color: $MilkshakesColor;
 
     padding-top: 124px;
-    padding-bottom: 40x;
+    padding-bottom: 40px;
     padding-left: 40px;
     padding-right: 40px;
 
@@ -345,7 +345,7 @@
         padding-top: 110px;
         padding-left: 26px;
         padding-right: 26px;
-        padding-bottom: 40x;
+        padding-bottom: 40px;
     }
 
     @include media ('desktop'){
@@ -354,7 +354,7 @@
         padding-top: 166px;
         padding-left: 60px;
         padding-right: 60px;
-        padding-bottom: 40x;
+        padding-bottom: 40px;
     }    
 
     &::before {
@@ -471,7 +471,11 @@
     }
 
     .products__button{
+        display: inline-block;
         width: 50px;
+        height: 20px;
+
+
         margin-left:auto;
         margin-right:auto;
 
@@ -481,24 +485,24 @@
         
     }
 
-    
     .array__icon{
-        fill:$PrimaryTextColor; 
-        width: 40;
-        height: 15;
-
+        fill: $PrimaryTextColor;
+        width: 40px;
+        height: 15px;
     }
-   
+
     .products__button:focus .array__icon{
-        width: 50;
-        height: 25;
+    transform: scaleY(1.5);
     }
 
+   
     .products__button:hover .array__icon{
-        width: 50;
-        height: 15;
+    transform: scaleX(1.2);
     }
+    
 
+
+    
  
 
     

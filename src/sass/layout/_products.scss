@@ -59,7 +59,7 @@
     margin-bottom: 12px;
 
     
-    @include font(800, 18, 22);
+    @include font(800, 18px, 22px);
     font-family: 'Montserrat';
     text-transform: uppercase;
 
@@ -86,7 +86,7 @@
     margin-bottom: 148px;
 
 
-    @include font(400, 30, 38);
+    @include font(400, 30px, 38px);
     font-family: 'Seymour One';
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -125,10 +125,11 @@
 
 
 .products__thumb_cream {
+    
+    @include flex(flex, center, center, column);
+    
     flex-shrink: 0;
     position: relative;
-    display: flex;
-    flex-direction: column;
     width: 280px;
     height: 420px;
     border-radius: 24px;
@@ -222,10 +223,12 @@
 
 
 .products__thumb_coffee {
+    
+    @include flex(flex, center, center, column);
+    
+    
     flex-shrink: 0;
     position: relative;
-    display: flex;
-    flex-direction: column;
     width: 280px;
     height: 420px;
     border-radius: 24px;
@@ -319,10 +322,12 @@
 
 
 .products__thumb_milkshakes {
+    
+    @include flex(flex, center, center, column);
+    
+    
     flex-shrink: 0;
     position: relative;
-    display: flex;
-    flex-direction: column;
     width: 280px;
     height: 420px;
     border-radius: 24px;
@@ -418,10 +423,7 @@
     margin-bottom: 40px;
     text-align: center;
 
-
-
-
-    @include font(700, 20, 24);
+    @include font(700, 20px, 24px);
     font-family: 'Montserrat';
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -447,7 +449,7 @@
     margin-right: auto;
     margin-left: auto;
 
-    @include font(400, 14, 25);
+    @include font(400, 14px, 25px);
     font-family: 'Montserrat';
 
     text-align: center;

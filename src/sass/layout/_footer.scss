@@ -19,6 +19,12 @@
       letter-spacing: 0.04em;
       max-width: 352px;
     }
+    // -----------------------desktop----------------
+    @include media('desktop') {
+      @include font(400, 30px, 37px);
+      letter-spacing: 0.04em;
+      max-width: 504px;
+    }
   }
 
   &__header {
@@ -31,6 +37,11 @@
       @include font(700, 48px, 59px);
       letter-spacing: 0.06em;
       max-width: 352px;
+    }
+    // -------------------desktop------------------
+    @include media('desktop') {
+      @include font(700, 58px, 71px);
+      max-width: 504px;
     }
   }
 }
@@ -45,6 +56,10 @@
     margin-bottom: 32px;
     gap: 30px;
   }
+  // -------------------desktop---------------------
+  @include media('desktop') {
+    margin-bottom: 40px;
+  }
 }
 
 .footer-address {
@@ -58,7 +73,11 @@
     @include font(700, 14px, 26px);
     letter-spacing: 0.02em;
   }
-  // ----------------------------------------------
+  // ----------------------desktop------------------------
+  @include media('tablet') {
+    @include font(700, 16px, 30px);
+  }
+
   &__text {
     color: $PrimaryTextColor;
   }
@@ -82,18 +101,24 @@
       letter-spacing: 0.02em;
       max-width: 300px;
     }
+    // -----------------------desktop---------------------
+    @include media('desktop') {
+      @include font(700, 12px, 22px);
+    }
   }
 }
 .footer__container {
   @include media('tablet') {
     display: flex;
-    // align-items: center;
     justify-content: space-between;
   }
 }
 .footer__wrapper {
   @include media('tablet') {
     margin-top: 66px;
+  }
+  @include media('desktop') {
+    margin-top: 13px;
   }
 }
 // ----------------footer-icons----------------------

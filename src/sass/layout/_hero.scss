@@ -38,9 +38,13 @@
   display: flex;
   flex-direction: row;
   gap: 8px;
+  z-index: 10;
 }
 
 .hero__single-button {
+  display: flex;
+  align-items: center;
+
   height: 20px;
   width: auto;
   padding: 0 11px;
@@ -53,12 +57,28 @@
   font-weight: 600;
   font-size: 8px;
   line-height: 0.8;
+  color: $PrimaryTextColor;
+
+  &:hover {
+    border: 2px solid $HoverButtonColor;
+  }
+  &:focus {
+    border: 2px solid $HoverButtonColor;
+    color: $SecondaryWhiteColor;
+  }
+  z-index: 11;
 }
 
 .single-button__2 {
   border: 2px solid $BackgroundMainColor;
   color: $AccentColor;
   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $BackgroundMainColor;
+    color: $HoverButtonColor;
+  }
 }
 
 // .hero__picture {

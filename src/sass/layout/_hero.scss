@@ -1,10 +1,10 @@
 .hero {
   position: relative;
+
   display: flex;
   flex-direction: column;
   height: 454px;
   margin-top: -1px;
-  // padding-bottom: 245px;
 
   background-color: $BackgroundMainColor;
 }
@@ -23,8 +23,7 @@
   color: $SecondaryWhiteColor;
 
   font-family: 'Seymour One';
-  font-size: 26px;
-  line-height: 1.27;
+  @include font(400, 26px, 33px);
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -54,9 +53,7 @@
   cursor: pointer;
 
   font-family: 'Montserrat';
-  font-weight: 600;
-  font-size: 8px;
-  line-height: 0.8;
+  @include font(600, 8px, 10px);
   color: $PrimaryTextColor;
 
   &:hover {
@@ -70,22 +67,16 @@
 }
 
 .single-button__2 {
-  border: 2px solid $BackgroundMainColor;
+  border: none;
   color: $AccentColor;
   text-decoration: underline;
 
   &:hover,
   &:focus {
-    border: 2px solid $BackgroundMainColor;
+    border: none;
     color: $HoverButtonColor;
   }
 }
-
-// .hero__picture {
-//   position: absolute;
-//   bottom: 0;
-//   left: 50%;
-// }
 
 .hero__icecream {
   position: absolute;

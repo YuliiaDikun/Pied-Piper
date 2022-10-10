@@ -76,14 +76,12 @@
     margin: 0 auto;
 
     color: $FooterTextColor;
-    max-width: 150px;
+    max-width: 170px;
     // ---------------------------tablet----------------------
     @include media('tablet') {
       letter-spacing: 0.02em;
       max-width: 300px;
     }
-
-    max-width: 170px;
   }
 }
 .footer__container {

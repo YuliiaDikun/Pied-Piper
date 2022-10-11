@@ -1,15 +1,25 @@
 // @import './utils/variables';
 
 .header {
+  background-color: $BackgroundMainColor;
+}
+
+.header__container {
   //   position: relative;
   display: flex;
   padding-top: 12px;
   padding-bottom: 1px;
 
-  background-color: $BackgroundMainColor;
+  @media screen and (min-width: 768px) {
+    padding-top: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 8px;
+  }
 }
 
-.header__logo {
+.header__icecream {
   width: 40px;
   height: 37px;
 }
@@ -21,6 +31,7 @@
   background-color: transparent;
   cursor: pointer;
   border: none;
+  z-index: 25;
 }
 
 .header__buy {

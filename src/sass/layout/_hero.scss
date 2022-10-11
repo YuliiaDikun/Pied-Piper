@@ -1,4 +1,8 @@
 .hero {
+  background-color: $BackgroundMainColor;
+}
+
+.hero__container {
   position: relative;
 
   display: flex;
@@ -6,7 +10,10 @@
   height: 454px;
   margin-top: -1px;
 
-  background-color: $BackgroundMainColor;
+  background-size: contain;
+  background-image: url('../images/hero/dots-s-min.png');
+  background-repeat: no-repeat;
+  background-position: left 0% bottom 0%;
 
   @media screen and (min-width: 768px) {
     height: 349px;
@@ -17,9 +24,9 @@
 //                  Hero Title
 // ==============================================
 .hero__content {
-  position: absolute;
-  width: 247px;
-  top: 13%;
+  // position: absolute;
+  // top: 13%;
+  padding-top: 60px;
 
   @media screen and (min-width: 768px) {
     top: 8%;
@@ -31,8 +38,7 @@
 }
 
 .hero__title {
-  width: auto;
-  height: auto;
+  max-width: 247px;
 
   margin-bottom: 32px;
 
@@ -73,12 +79,12 @@
   display: flex;
   align-items: center;
 
-  height: 20px;
+  height: 24px;
   width: auto;
   padding: 0 11px;
   background-color: transparent;
   border: 2px solid $AccentColor;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
 
   font-family: 'Montserrat';
@@ -111,14 +117,25 @@
 //                    Hero Picture
 // =================================================
 
-.hero__icecream {
+.hero__bg {
+  max-width: auto;
   position: absolute;
-  bottom: -53px;
-  margin-left: 15px;
+  bottom: -84px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero__icecream {
+  // position: absolute;
+  // bottom: -53px;
+  // margin-left: 15px;
+  // bottom: 0;
+  // left: 0;
 
   z-index: 5;
   @media screen and (min-width: 768px) {
     bottom: -56px;
+
     right: 26px;
 
     // width: 181px;

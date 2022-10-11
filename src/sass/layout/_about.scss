@@ -1,148 +1,128 @@
 .about {
+  background-color: $BackgroundMainColor;
   padding: 60px 0;
+  text-align: center;
   @include media('tablet') {
-    padding-bottom: 53px;
+    padding-bottom: 40px;
   }
   @include media('dekstop') {
     padding-bottom: 86px;
   }
-  &__logo {
-    color: $WhiteIconColor;
-    margin-bottom: 12px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.22;
-    text-align: center;
-    text-transform: uppercase;
+  &__container {
     @include media('tablet') {
-      font-size: 22px;
-      font-weight: 800;
+      display: flex;
+      gap: 32px;
+      margin-top: 72px;
     }
     @include media('dekstop') {
-      font-size: 30px;
+      align-items: center;
+      gap: 100px;
+    }
+  }
+  &__description {
+    margin-top: 40px;
+    @include media('tablet') {
+      text-align: start;
+      width: 336px;
+    }
+    @include media('dekstop') {
+      width: 463px;
     }
   }
   &__heading {
-    font-size: 30px;
-    line-height: 1.26;
-    text-align: center;
-    text-transform: uppercase;
     color: $WhiteIconColor;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 32px;
-
-    @include media('mobile') {
-      max-width: 200px;
-    }
-
+    margin-top: 12px;
+    text-transform: uppercase;
+    @include font(400, 30px, 38px);
     @include media('tablet') {
-      font-size: 34px;
-      letter-spacing: 0.06em;
-      margin-bottom: 72px;
+      @include font(400, 34px, 43px);
     }
-
     @include media('dekstop') {
-      margin-bottom: 82px;
-      font-size: 36px;
-    }
-  }
-  &__container {
-    @media screen and (min-width: 768px) {
-      display: flex;
-    }
-  }
-  &__picture {
-    position: relative;
-    width: 278px;
-    height: 278px;
-    border-radius: 50%;
-    background-color: $AccentColor;
-    margin-left: auto;
-    margin-right: auto;
-
-    @media screen and (max-width: 479px) {
-      max-width: 278px;
-      max-height: 278px;
-    }
-
-    @media screen and (max-width: 767px) {
-      margin-bottom: 61px;
-    }
-
-    @media screen and (min-width: 768px) {
-      width: 336px;
-      height: 330px;
-      margin-right: 32px;
-    }
-
-    @media screen and (min-width: 1200px) {
-      width: 490px;
-      height: 490px;
-      margin-right: 100px;
+      @include font(400, 36px, 45px);
     }
   }
   &__img {
-    position: absolute;
-    transform: translateY(21px);
-
-    border-radius: 50%;
-    width: 100%;
-
-    //   width: 278px;
-    //   height: 278px;
-    @media screen and (min-width: 768px) {
-      width: 278px;
-    }
-
-    @media screen and (min-width: 768px) {
-      transform: translateY(26px);
+    margin-top: 21px;
+    @include media('tablet') {
       width: 336px;
-      height: 330px;
     }
-
-    @media screen and (min-width: 1200px) {
-      transform: translateY(40px);
+    @include media('dekstop') {
       width: 490px;
-      height: 490px;
+    }
+  }
+  &__logo {
+    color: $WhiteIconColor;
+    text-transform: uppercase;
+    @include font(470, 18px, 22px);
+    @include media('tablet') {
+      @include font(800, 22px, 27px);
+    }
+    @include media('dekstop') {
+      @include font(800, 30px, 37px);
+    }
+  }
+  &__picture {
+    @include media('tablet') {
+      width: 336px;
+    }
+    @include media('dekstop') {
+      width: 490px;
+    }
+  }
+  &__text {
+    @include font(400, 12px, 19px);
+    &:last-of-type {
+      display: none;
+    }
+    &:not(:first-child) {
+      margin-top: 4px;
+    }
+    @include media('tablet') {
+      &:not(:first-child) {
+        margin-top: 8px;
+      }
+      &:last-of-type {
+        display: block;
+      }
+    }
+    @include media('dekstop') {
+      @include font(400, 16px, 28px);
+      &:not(:first-child) {
+        @include font(400, 14px, 27px);
+      }
+      &:last-of-type {
+        display: block;
+      }
     }
   }
 }
 .read-more-btn {
-  display: flex;
+  @include font(600, 14px, 18px);
   align-items: center;
-  justify-content: center;
-  width: 164px;
-  height: 42px;
-
-  border: transparent;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.29;
-  color: $PrimaryTextColor;
-
   background-color: $AccentColor;
+  border: transparent;
   border-radius: 10px;
+  color: $PrimaryTextColor;
+  display: flex;
+  justify-content: center;
+  height: 42px;
+  width: 164px;
 
   &:hover {
     background-color: $HoverButtonColor;
   }
-
   &:focus {
+    color: $AccentColor;
     background-color: $HoverButtonColor;
-    color: $WhiteIconColor;
     border: transparent;
     outline: 0;
   }
-
   &:focus {
     .about__button-arrow {
-      color: $WhiteIconColor;
+      color: $AccentColor;
     }
   }
-
-  @media screen and (max-width: 767.8px) {
+  @include media('mobile') {
     margin: 0 auto;
   }
 }

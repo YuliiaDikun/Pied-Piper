@@ -16,9 +16,39 @@
 
 .menu-toggle {
   // @include flex(flex, center, center);
-  margin: 0 0 0 auto;
+  // margin: 0 0 0 auto;
 
   background-color: transparent;
   cursor: pointer;
   border: none;
+}
+
+.header__buy {
+  width: 152px;
+  margin-left: 32px;
+  // margin-left: auto;
+  border: none;
+  border-radius: 10px;
+  background-color: $AccentColor;
+  z-index: 25;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    animation-name: slide-left-header;
+    animation-duration: 2s;
+    // margin-right: 32px;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes slide-left-header {
+  0% {
+    transform: translateX(32);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

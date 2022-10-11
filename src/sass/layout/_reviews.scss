@@ -12,13 +12,16 @@
 }
 
 .swiper-wrapper {
-  margin-bottom: 30px;
+  padding-bottom: 30px;
+  // ----tablet--and--far-------
+  @include media('tablet') {
+    padding-bottom: 45px;
+  }
 }
 .swiper-slide {
   padding: 0 5px;
   @include flex(flex, center, center, column);
   margin-top: auto;
-  cursor: pointer;
 }
 .swiper-img {
   margin-bottom: 32px;

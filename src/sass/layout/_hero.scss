@@ -1,11 +1,17 @@
-.hero__section {
+.hero {
+  position: relative;
+
   display: flex;
   flex-direction: column;
-  position: relative;
-  padding-top: 61px;
-  padding-bottom: 245px;
+  height: 454px;
+  margin-top: -1px;
 
   background-color: $BackgroundMainColor;
+}
+
+.hero__content {
+  position: absolute;
+  top: 13%;
 }
 
 .hero__title {
@@ -17,8 +23,7 @@
   color: $SecondaryWhiteColor;
 
   font-family: 'Seymour One';
-  font-size: 26px;
-  line-height: 1.27;
+  @include font(400, 26px, 33px);
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -29,37 +34,61 @@
 }
 
 .hero__buttons {
-  display: block;
+  display: flex;
   flex-direction: row;
   gap: 8px;
-  //   outline: 2xp solid blueviolet;
-  //   border: 2xp solid tomato;
+  z-index: 10;
 }
 
 .hero__single-button {
-  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+
   height: 20px;
   width: auto;
   padding: 0 11px;
   background-color: transparent;
-  //   border-style: solid;
-  // border: 2xp solid tomato;
   border: 2px solid $AccentColor;
   border-radius: 4px;
   cursor: pointer;
 
   font-family: 'Montserrat';
-  font-weight: 600;
-  font-size: 8px;
-  line-height: 0.8;
+  @include font(600, 8px, 10px);
+  color: $PrimaryTextColor;
+
+  &:hover {
+    border: 2px solid $HoverButtonColor;
+  }
+  &:focus {
+    border: 2px solid $HoverButtonColor;
+    color: $SecondaryWhiteColor;
+  }
+  z-index: 11;
 }
 
-// .single-button__1 {
-//   border: 2px solid $AccentColor;
-// }
-
 .single-button__2 {
-  border: 2px solid $BackgroundMainColor;
+  border: none;
   color: $AccentColor;
   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    border: none;
+    color: $HoverButtonColor;
+  }
+}
+
+.hero__icecream {
+  position: absolute;
+  bottom: -53px;
+  left: 35px;
+  z-index: 5;
+}
+
+.hero__background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  z-index: 1;
 }

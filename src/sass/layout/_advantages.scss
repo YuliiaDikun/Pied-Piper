@@ -1,5 +1,7 @@
 .advantages{
-    padding: 40px 85px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0 auto;
     background-color: $BackgroundMainColor;
 }
 
@@ -12,12 +14,11 @@
 
     @include media ('tablet'){
         flex-direction: row;
-        gap: 80px;
+        gap: 75px;
     }
 
-    @include media ('tablet'){
-        flex-direction: row;
-        gap: 90px;
+    @include media ('desktop'){
+        gap: 80px;
     }
 
 }
@@ -25,7 +26,7 @@
 .advantages__thumb{
     position: relative;
    
-    width: 90%;
+    width: 70%;
     padding-top: 80px;
     margin: 0 auto;
 
@@ -40,10 +41,12 @@
 
         @include media ('tablet'){
             padding-top: 95px;
+            width: 23%;
         }
 
         @include media ('desktop'){
             padding-top: 100px;
+            width: 70%;
         }
 
 
@@ -144,12 +147,15 @@
     
     text-align: center;
     margin-bottom: 18px;
-    font-family: 'Roboto';
+    
     text-transform: uppercase;
 
     @include media ('tablet'){
+        font-family: 'Montserrat';
         font-size: 48px;
         line-height: calc(48/59);
+        text-transform:none;
+        letter-spacing: 0.04em;
     }
 
     @include media ('desktop'){
@@ -176,6 +182,7 @@
     @include media ('desktop'){
         font-size: 16px;
         line-height: calc(28/16);
+        letter-spacing: 0.02em;
     }
 
 

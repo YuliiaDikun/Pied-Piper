@@ -18,6 +18,7 @@
   padding: 0 5px;
   @include flex(flex, center, center, column);
   margin-top: auto;
+  cursor: pointer;
 }
 .swiper-img {
   margin-bottom: 32px;

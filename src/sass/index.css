@@ -617,13 +617,64 @@ body {
 
 .about {
   background-color: #84a278;
-  padding: 60px 0;
+  padding-bottom: 43px;
+  padding-top: 60px;
   text-align: center;
 }
 @media only screen and (min-width: 768px) {
   .about {
     padding-bottom: 40px;
   }
+}
+@media only screen and (min-width: 1200px) {
+  .about {
+    padding-bottom: 86px;
+  }
+}
+.about__btn {
+  align-items: center;
+  border: transparent;
+  color: #131313;
+  background-color: #f8d24e;
+  border-radius: 10px;
+  height: 42px;
+  justify-content: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 164px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2857142857;
+}
+.about__btn:hover {
+  background-color: #0a8817;
+}
+.about__btn:focus {
+  background-color: #0a8817;
+  border: transparent;
+  color: #fcfcfc;
+  outline: 0;
+}
+.about__btn:focus .read-more-btn__icon {
+  color: #fcfcfc;
+}
+@media only screen and (min-width: 480px) {
+  .about__btn {
+    margin: 0 auto;
+  }
+}
+.about__btn__icon {
+  fill: none;
+  margin-left: 7px;
+  stroke: #131313;
+}
+.mobile__btn:focus .about__btn__icon {
+  stroke: #fcfcfc;
+}
+.mobile__btn:disabled .about__btn__icon {
+  stroke: #ababab;
+}
+.about__container {
+  align-items: center;
 }
 @media only screen and (min-width: 768px) {
   .about__container {
@@ -632,8 +683,16 @@ body {
     margin-top: 72px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .about__container {
+    align-items: center;
+    gap: 100px;
+  }
+}
 .about__description {
+  color: #ffffff;
   margin-top: 40px;
+  margin-bottom: 20px;
 }
 @media only screen and (min-width: 768px) {
   .about__description {
@@ -641,8 +700,14 @@ body {
     width: 336px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .about__description {
+    width: 463px;
+  }
+}
 .about__heading {
   color: #ffffff;
+  font-family: "Seymour One";
   margin-top: 12px;
   text-transform: uppercase;
   font-weight: 400;
@@ -656,12 +721,27 @@ body {
     line-height: 1.2647058824;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .about__heading {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.25;
+  }
+}
 .about__img {
   margin-top: 21px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media only screen and (min-width: 768px) {
   .about__img {
+    margin-top: 0px;
     width: 336px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .about__img {
+    width: 490px;
   }
 }
 .about__logo {
@@ -678,21 +758,36 @@ body {
     line-height: 1.2272727273;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .about__logo {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.2333333333;
+  }
+}
 @media only screen and (min-width: 768px) {
   .about__picture {
     width: 336px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .about__picture {
+    width: 490px;
   }
 }
 .about__text {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.5833333333;
+  padding-top: 4px;
+  justify-content: center;
+  text-align: left;
+}
+.about__text:not(:first-child) {
+  margin-bottom: 20px;
 }
 .about__text:last-of-type {
   display: none;
-}
-.about__text:not(:first-child) {
-  margin-top: 4px;
 }
 @media only screen and (min-width: 768px) {
   .about__text:not(:first-child) {
@@ -702,36 +797,14 @@ body {
     display: block;
   }
 }
-
-.read-more-btn {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.2857142857;
-  align-items: center;
-  background-color: #f8d24e;
-  border: transparent;
-  border-radius: 10px;
-  color: #131313;
-  display: flex;
-  justify-content: center;
-  height: 42px;
-  width: 164px;
-}
-.read-more-btn:hover {
-  background-color: #0a8817;
-}
-.read-more-btn:focus {
-  color: #f8d24e;
-  background-color: #0a8817;
-  border: transparent;
-  outline: 0;
-}
-.read-more-btn:focus .about__button-arrow {
-  color: #f8d24e;
-}
-@media only screen and (min-width: 480px) {
-  .read-more-btn {
-    margin: 0 auto;
+@media only screen and (min-width: 1200px) {
+  .about__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  .about__text:last-of-type {
+    display: block;
   }
 }
 

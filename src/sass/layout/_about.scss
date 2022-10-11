@@ -1,11 +1,12 @@
 .about {
   background-color: $BackgroundMainColor;
-  padding: 60px 0;
+  padding-bottom: 43px;
+  padding-top: 60px;
   text-align: center;
   @include media('tablet') {
     padding-bottom: 40px;
   }
-  @include media('dekstop') {
+  @include media('desktop') {
     padding-bottom: 86px;
   }
   &__container {
@@ -14,30 +15,32 @@
       gap: 32px;
       margin-top: 72px;
     }
-    @include media('dekstop') {
+    @include media('desktop') {
       align-items: center;
       gap: 100px;
     }
   }
   &__description {
+    color: $WhiteIconColor;
     margin-top: 40px;
     @include media('tablet') {
       text-align: start;
       width: 336px;
     }
-    @include media('dekstop') {
+    @include media('desktop') {
       width: 463px;
     }
   }
   &__heading {
     color: $WhiteIconColor;
+    font-family: 'Seymour One';
     margin-top: 12px;
     text-transform: uppercase;
     @include font(400, 30px, 38px);
     @include media('tablet') {
       @include font(400, 34px, 43px);
     }
-    @include media('dekstop') {
+    @include media('desktop') {
       @include font(400, 36px, 45px);
     }
   }
@@ -46,7 +49,7 @@
     @include media('tablet') {
       width: 336px;
     }
-    @include media('dekstop') {
+    @include media('desktop') {
       width: 490px;
     }
   }
@@ -57,7 +60,7 @@
     @include media('tablet') {
       @include font(800, 22px, 27px);
     }
-    @include media('dekstop') {
+    @include media('desktop') {
       @include font(800, 30px, 37px);
     }
   }
@@ -65,17 +68,16 @@
     @include media('tablet') {
       width: 336px;
     }
-    @include media('dekstop') {
+    @include media('desktop') {
       width: 490px;
     }
   }
   &__text {
     @include font(400, 12px, 19px);
-    &:last-of-type {
-      display: none;
-    }
+    padding-top: 4px;
+    text-align: center;
     &:not(:first-child) {
-      margin-top: 4px;
+      padding-bottom: 20px;
     }
     @include media('tablet') {
       &:not(:first-child) {
@@ -85,7 +87,7 @@
         display: block;
       }
     }
-    @include media('dekstop') {
+    @include media('desktop') {
       @include font(400, 16px, 28px);
       &:not(:first-child) {
         @include font(400, 14px, 27px);
@@ -97,32 +99,41 @@
   }
 }
 .read-more-btn {
-  @include font(600, 14px, 18px);
   align-items: center;
-  background-color: $AccentColor;
   border: transparent;
-  border-radius: 10px;
   color: $PrimaryTextColor;
-  display: flex;
-  justify-content: center;
+  background-color: $AccentColor;
+  border-radius: 10px;
   height: 42px;
+  justify-content: center;
   width: 164px;
-
+  @include font(600, 14px, 18px);
   &:hover {
     background-color: $HoverButtonColor;
   }
   &:focus {
-    color: $AccentColor;
     background-color: $HoverButtonColor;
     border: transparent;
+    color: $SecondaryWhiteColor;
     outline: 0;
   }
   &:focus {
     .about__button-arrow {
-      color: $AccentColor;
+      color: $SecondaryWhiteColor;
     }
   }
   @include media('mobile') {
     margin: 0 auto;
+  }
+  &__icon {
+    fill: none;
+    margin-left: 7px;
+    stroke: $PrimaryTextColor;
+    .mobile__btn:focus & {
+      stroke: $SecondaryWhiteColor;
+    }
+    .mobile__btn:disabled & {
+      stroke: $disabled;
+    }
   }
 }

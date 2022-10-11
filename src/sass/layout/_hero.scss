@@ -118,36 +118,11 @@
 // =================================================
 
 .hero__bg {
-  max-width: auto;
-  position: absolute;
-  bottom: -84px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.hero__icecream {
-  // position: absolute;
-  // bottom: -53px;
-  // margin-left: 15px;
-  // bottom: 0;
-  // left: 0;
-
-  z-index: 5;
-  @media screen and (min-width: 768px) {
-    bottom: -56px;
-
-    right: 26px;
-
-    // width: 181px;
-  }
-}
-
-.hero__dots {
   position: absolute;
   bottom: 0;
-  left: 0;
-
-  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
 }
 
 // ===========================================

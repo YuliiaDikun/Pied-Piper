@@ -1,0 +1,94 @@
+.hero {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  height: 454px;
+  margin-top: -1px;
+
+  background-color: $BackgroundMainColor;
+}
+
+.hero__content {
+  position: absolute;
+  top: 13%;
+}
+
+.hero__title {
+  width: 247px;
+  height: auto;
+
+  margin-bottom: 32px;
+
+  color: $SecondaryWhiteColor;
+
+  font-family: 'Seymour One';
+  @include font(400, 26px, 33px);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero__passion {
+  font-size: 34px;
+  line-height: 96.5%;
+}
+
+.hero__buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  z-index: 10;
+}
+
+.hero__single-button {
+  display: flex;
+  align-items: center;
+
+  height: 20px;
+  width: auto;
+  padding: 0 11px;
+  background-color: transparent;
+  border: 2px solid $AccentColor;
+  border-radius: 4px;
+  cursor: pointer;
+
+  font-family: 'Montserrat';
+  @include font(600, 8px, 10px);
+  color: $PrimaryTextColor;
+
+  &:hover {
+    border: 2px solid $HoverButtonColor;
+  }
+  &:focus {
+    border: 2px solid $HoverButtonColor;
+    color: $SecondaryWhiteColor;
+  }
+  z-index: 11;
+}
+
+.single-button__2 {
+  border: none;
+  color: $AccentColor;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    border: none;
+    color: $HoverButtonColor;
+  }
+}
+
+.hero__icecream {
+  position: absolute;
+  bottom: -53px;
+  left: 35px;
+  z-index: 5;
+}
+
+.hero__background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  z-index: 1;
+}

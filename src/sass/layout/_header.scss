@@ -1,0 +1,24 @@
+// @import './utils/variables';
+
+.header {
+  //   position: relative;
+  display: flex;
+  padding-top: 12px;
+  padding-bottom: 1px;
+
+  background-color: $BackgroundMainColor;
+}
+
+.header__logo {
+  width: 40px;
+  height: 37px;
+}
+
+.menu-toggle {
+  // @include flex(flex, center, center);
+  margin: 0 0 0 auto;
+
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}

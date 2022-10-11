@@ -12,11 +12,9 @@
   clip-path: inset(50%);
   margin: -1px;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 *,
 *::before,
 *::after {
@@ -24,7 +22,6 @@ html {
   margin: 0;
   border: 0;
 }
-
 h1,
 h2,
 h3,
@@ -35,27 +32,41 @@ p {
   margin: 0;
   padding: 0;
 }
-
 a,
 a:visited {
   text-decoration: none;
 }
-
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
 .container {
   min-width: 320px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+}
+.header {
+  display: flex;
+  padding-top: 12px;
+  background-color: #84a278;
+}
+.header__logo {
+  width: 40px;
+  height: 37px;
+}
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0 auto;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
 } /*# sourceMappingURL=index.css.map */

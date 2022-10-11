@@ -1,17 +1,20 @@
-:root {
-    $primary-text-color: #131313; // Чорний. Основний колір тексту.
-    $secondary-white-color: #fcfcfc; // Білий. Використовується для білого шрифту тексту та фону карточок.
-    $accent-color: #f8d24e; 
+$PrimaryTextColor: #131313; // Чорний. Основний колір тексту.
+$SecondaryWhiteColor: #fcfcfc; // Білий. Використовується для білого шрифту тексту та фону карточок.
+$AccentColor: #f8d24e;
 
-    $background-main-color: #84a278; // Темно-зелений. Використовується як фон в секціях та карточках.
-    $background-secondary-color: #97af8d; // Світло=зелений. Використовується як фон в модальному вікні хедера, карточки Ice cream та деяких елементів в модальному вікні.
-   
-    $footer-text-color: #7a7a7a; // Текст виключно у футері.
-    $hover-button-color: #0a8817; // Зелений. Використовується як колір кнопок при ховері.
+$BackgroundMainColor: #84a278; // Темно-зелений. Використовується як фон в секціях та карточках.
+$BackgroundSecondaryColor: #97af8d; // Світло=зелений. Використовується як фон в модальному вікні хедера, карточки Ice cream та деяких елементів в модальному вікні.
 
-    $ice-coffee-color: #EFd478; // Світло-жовтий. Використовуєтся у карточці Ice-cofee в секціїї Product. 
-    $Milkshakes-color: #D6936d; // Коричневий. Використовуєтся у карточці Milkshake в секціїї Product. 
+$FooterTextColor: #7a7a7a; // Текст виключно у футері.
+$HoverButtonColor: #0a8817; // Зелений. Використовується як колір кнопок при ховері.
 
+$IceCoffeeColor: #efd478; // Світло-жовтий. Використовуєтся у карточці Ice-cofee в секціїї Product.
+$MilkshakesColor: #d6936d; // Коричневий. Використовуєтся у карточці Milkshake в секціїї Product.
+$IceCreamColor: #aec6a5; // Використовуєтся у карточці Ice-cofee в секціїї Product.
 
-    // Приклад використання змінних кольорів "color: $primary-text-color;"
-}
+$disabled: #ababab; // disabled buttons
+$BorderColor: #e1e1e1; // Кольор границі в футері
+
+$WhiteIconColor: #ffffff; // Кольор в іконках футер ховер
+$contactsTabletColor: #907e82;
+// Приклад використання змінних кольорів "color: $primary-tеxt-сolor;"

@@ -1,4 +1,8 @@
 .hero {
+  background-color: $BackgroundMainColor;
+}
+
+.hero__container {
   position: relative;
 
   display: flex;
@@ -6,17 +10,35 @@
   height: 454px;
   margin-top: -1px;
 
-  background-color: $BackgroundMainColor;
+  background-size: contain;
+  background-image: url('../images/hero/dots-s-min.png');
+  background-repeat: no-repeat;
+  background-position: left 0% bottom 0%;
+
+  @media screen and (min-width: 768px) {
+    height: 349px;
+  }
 }
 
+// ==============================================
+//                  Hero Title
+// ==============================================
 .hero__content {
-  position: absolute;
-  top: 13%;
+  // position: absolute;
+  // top: 13%;
+  padding-top: 60px;
+
+  @media screen and (min-width: 768px) {
+    top: 8%;
+    width: 181px;
+  }
+  // @media screen and (min-width: 1200px) {
+  //   width: calc((100% - 90px) / 4);
+  // }
 }
 
 .hero__title {
-  width: 247px;
-  height: auto;
+  max-width: 247px;
 
   margin-bottom: 32px;
 
@@ -26,12 +48,25 @@
   @include font(400, 26px, 33px);
   letter-spacing: 0.04em;
   text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    @include font(400, 18px, 23px);
+    margin-bottom: 20px;
+  }
 }
 
 .hero__passion {
-  font-size: 34px;
-  line-height: 96.5%;
+  @include font(400, 34px, 33px);
+  // font-size: 34px;
+  // line-height: 96.5%;
+  @media screen and (min-width: 768px) {
+    @include font(400, 24px, 13px);
+  }
 }
+
+// ===============================================
+//                  Hero Buttons
+// ===============================================
 
 .hero__buttons {
   display: flex;
@@ -44,12 +79,12 @@
   display: flex;
   align-items: center;
 
-  height: 20px;
+  height: 24px;
   width: auto;
   padding: 0 11px;
   background-color: transparent;
   border: 2px solid $AccentColor;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
 
   font-family: 'Montserrat';
@@ -78,17 +113,137 @@
   }
 }
 
-.hero__icecream {
+// =================================================
+//                    Hero Picture
+// =================================================
+
+.hero__bg {
   position: absolute;
-  bottom: -53px;
-  left: 35px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 5;
 }
 
-.hero__background {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+// ===========================================
+//             Hero Retail Counter
+// ===========================================
 
-  z-index: 1;
+.retail {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-top: 28px;
+    position: absolute;
+    // right: 32px;
+    right: 0;
+  }
+
+  &__content {
+    background-repeat: no-repeat;
+    background-position: top 0 right 0;
+
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      background-size: 18px;
+    }
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-right: 20px;
+      background-size: 30px;
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+    }
+  }
+
+  @keyframes slide-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-30px);
+    }
+  }
+
+  &__content:first-child {
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      animation-name: slide-left;
+      animation-duration: 2s;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &__content:last-child {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      animation-name: slide-left;
+      animation-delay: 1s;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &__content:hover,
+  &__content:focus {
+    transform: scale(1.1);
+  }
+
+  &__number {
+    display: block;
+    margin-bottom: 4px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $PrimaryTextColor;
+
+    @media screen and (max-width: 1279px) {
+      font-size: 28px;
+      line-height: 1.14;
+    }
+
+    @media screen and (min-width: 1280px) {
+      font-size: 46px;
+      line-height: 1.15;
+    }
+  }
+
+  &__type {
+    display: block;
+
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 10px;
+
+    text-align: right;
+    color: $SecondaryWhiteColor;
+
+    @media screen and (max-width: 1279px) {
+      font-size: 8px;
+      line-height: 1.25;
+    }
+
+    @media screen and (min-width: 1280px) {
+      font-size: 14px;
+      line-height: 1.3;
+    }
+  }
 }

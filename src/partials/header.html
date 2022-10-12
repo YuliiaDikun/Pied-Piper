@@ -3,33 +3,14 @@
     <div class="header__logo">
       <picture class="header__icecream">
         <source
-          media="(min-width: 1200px)"
           srcset="
             images/logo/Logo-l-min.png    1x,
             images/logo/Logo-l@2x-min.png 2x
           "
-        />
-        <source
-          media="(min-width: 768px)"
-          srcset="
-            images/logo/Logo-l-min.png    1x,
-            images/logo/Logo-l@2x-min.png 2x
-          "
-          width="45"
-          height="44"
-        />
-        <source
-          media="(max-width: 767px)"
-          srcset="
-            images/logo/Logo-l-min.png    1x,
-            images/logo/Logo-l@2x-min.png 2x
-          "
-          width="38"
-          height="38"
         />
         <img
           src="images/logo/Logo-l-min.png"
-          alt="Логотип сайту - морозиво"
+          alt="Site logo - icecream"
           loading="lazy"
         />
       </picture>
@@ -37,6 +18,19 @@
       <!-- <div class="header__logo">main logo</div> -->
     </div>
 
+    <div class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item"><a href="#hero">Home</a></li>
+        <li class="header__nav-item">
+          <a href="#about">How it’s made?</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#product_section">Our products</a>
+        </li>
+        <li class="header__nav-item"><a href="#contacts">Contact</a></li>
+      </ul>
+    </div>
+    <a href=""></a>
     <button
       class="menu-toggle js-open-menu"
       aria-expanded="false"

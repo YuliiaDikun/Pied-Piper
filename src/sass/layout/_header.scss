@@ -1,11 +1,8 @@
-// @import './utils/variables';
-
 .header {
   background-color: $BackgroundMainColor;
 }
 
 .header__container {
-  //   position: relative;
   display: flex;
   align-items: center;
   padding-top: 12px;
@@ -16,19 +13,46 @@
   }
 
   @media screen and (min-width: 1200px) {
-    padding-top: 8px;
+    padding-top: 18px;
+    padding-left: 16px;
   }
 }
 
-// .header__icecream {
-//   width: 40px;
-//   height: 37px;
-// }
+// ===============================================
+//                  Header Navigation
+// ===============================================
+
+.header__nav {
+  display: flex;
+  margin-left: 265px;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.header__nav-list {
+  display: flex;
+  flex-direction: row;
+  gap: 27px;
+}
+.header__nav-item a {
+  // justify-content: center;
+  // align-items: center;
+  @include font(700, 16px, 20px);
+  color: $SecondaryWhiteColor;
+  &:hover,
+  &:focus {
+    color: $AccentColor;
+    text-decoration: underline;
+  }
+}
+// ===============================================
+//                  Header Buttons
+// ===============================================
 
 .menu-toggle {
-  // @include flex(flex, center, center);
-  // margin: 0 0 0 auto;
-
+  display: flex;
   background-color: transparent;
   cursor: pointer;
   border: none;
@@ -36,32 +60,31 @@
 }
 
 .header__buy {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(flex, center, center);
 
   width: 152px;
   height: 42px;
   margin-left: 32px;
-  // margin-left: auto;
+
   border: none;
   border-radius: 10px;
   background-color: $AccentColor;
   z-index: 25;
 
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
+  @include font(600, 14px, 17px);
 
   @media screen and (max-width: 767px) {
     display: none;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+  @media screen and (min-width: 768px) {
     animation-name: slide-left-header;
     animation-duration: 2s;
-    // margin-right: 32px;
     animation-fill-mode: forwards;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
   }
 
   &:focus {

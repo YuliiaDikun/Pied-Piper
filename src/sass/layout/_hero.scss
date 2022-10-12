@@ -57,11 +57,10 @@
 
   @media screen and (min-width: 768px) {
     padding-top: 40px;
-    width: 181px;
   }
-  // @media screen and (min-width: 1200px) {
-  //   width: calc((100% - 90px) / 4);
-  // }
+  @media screen and (min-width: 1200px) {
+    padding-top: 45px;
+  }
 }
 
 .hero__title {
@@ -79,15 +78,25 @@
   @media screen and (min-width: 768px) {
     @include font(400, 18px, 23px);
     margin-bottom: 20px;
+    max-width: 181px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font(400, 38px, 48px);
+    margin-bottom: 20px;
+    max-width: 367px;
   }
 }
 
 .hero__passion {
   @include font(400, 34px, 33px);
-  // font-size: 34px;
-  // line-height: 96.5%;
+
   @media screen and (min-width: 768px) {
     @include font(400, 24px, 13px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font(400, 38px, 48px);
   }
 }
 
@@ -104,8 +113,7 @@
 }
 
 .hero__single-button {
-  display: flex;
-  align-items: center;
+  @include flex(flex, center, center);
 
   height: 24px;
   width: auto;
@@ -127,6 +135,12 @@
     color: $SecondaryWhiteColor;
   }
   z-index: 11;
+
+  @media screen and (min-width: 1200px) {
+    width: 134px;
+    height: 42px;
+    @include font(600, 14px, 17px);
+  }
 }
 
 .single-button__2 {
@@ -138,6 +152,10 @@
   &:focus {
     border: none;
     color: $HoverButtonColor;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 154px;
   }
 }
 
@@ -160,18 +178,17 @@
 }
 
 .hero__plate-block {
-  // overflow: hidden;
-  margin-left: 32px;
-
   position: absolute;
-  // left: -180px;
-  left: -100%;
+
   display: flex;
   flex-direction: row;
   gap: 33px;
   width: 337px;
-  // transform: translateX(-100%);
-  // overflow: hidden;
+  margin-left: 32px;
+
+  // left: -180px;
+  left: -100%;
+  // top: 200px;
 
   @media screen and (max-width: 767px) {
     display: none;
@@ -179,7 +196,7 @@
 }
 
 .hero__plate-icecream {
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+  @media screen and (min-width: 768px) {
     animation-name: slide-right;
     animation-delay: 2s;
     animation-duration: 2s;
@@ -188,24 +205,19 @@
 }
 
 .hero__plate-text {
-  // transform: translateX(-101%);
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // align-items: center;
   gap: 20px;
 
   width: 151px;
 
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 17px;
+  @include font(400, 12px, 17px);
 
   color: $SecondaryWhiteColor;
   fill: $SecondaryWhiteColor;
 
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+  @media screen and (min-width: 768px) {
     animation-name: slide-right;
     animation-delay: 1.5s;
     animation-duration: 2s;
@@ -330,44 +342,27 @@
     margin-bottom: 4px;
 
     font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 28px;
-    line-height: 34px;
+    @include font(900, 28px, 34px);
     text-align: right;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $PrimaryTextColor;
 
-    @media screen and (max-width: 1199px) {
-      font-size: 28px;
-      line-height: 1.14;
-    }
-
     @media screen and (min-width: 1200px) {
-      font-size: 46px;
-      line-height: 1.15;
+      @include font(900, 46px, 56px);
     }
   }
 
   &__type {
     display: block;
 
-    font-weight: 400;
-    font-size: 8px;
-    line-height: 10px;
+    @include font(400, 8px, 10px);
 
     text-align: right;
     color: $SecondaryWhiteColor;
 
-    @media screen and (max-width: 1199px) {
-      font-size: 8px;
-      line-height: 1.25;
-    }
-
     @media screen and (min-width: 1200px) {
-      font-size: 14px;
-      line-height: 1.3;
+      @include font(400, 14px, 17px);
     }
   }
 }

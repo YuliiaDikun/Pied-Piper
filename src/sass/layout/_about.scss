@@ -10,18 +10,19 @@
     padding-bottom: 86px;
   }
   &__btn {
-    align-items: center;
+    width: 164px;
+    height: 42px;
     border: transparent;
     color: $PrimaryTextColor;
     background-color: $AccentColor;
     border-radius: 10px;
-    display: inline-flex;
-    height: 42px;
-    justify-content: center;
+    @include flex(inline-flex, center, center);
+
+    cursor: pointer;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    width: 164px;
+
     @include font(600, 14px, 18px);
     &:hover {
       background-color: $HoverButtonColor;
@@ -44,14 +45,11 @@
   }
   &__container {
     @include media('tablet') {
-      align-items: center;
-      display: flex;
+      @include flex(flex, center, center);
       gap: 32px;
-      justify-content: center;
       margin-top: 72px;
     }
     @include media('desktop') {
-      align-items: center;
       gap: 100px;
     }
   }
@@ -90,11 +88,13 @@
     }
   }
   &__img {
-    margin-top: 21px;
+    margin-top: 31px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 40px;
     @include media('tablet') {
       margin-top: 0px;
+      margin-bottom: 0;
       width: 336px;
     }
     @include media('desktop') {
@@ -123,7 +123,7 @@
   &__text {
     @include font(400, 12px, 19px);
     padding-top: 4px;
-    text-align: left;
+    text-align: center;
     &:not(:first-child) {
       margin-bottom: 20px;
     }
@@ -131,6 +131,7 @@
       display: none;
     }
     @include media('tablet') {
+      text-align: left;
       &:not(:first-child) {
         margin-top: 8px;
       }

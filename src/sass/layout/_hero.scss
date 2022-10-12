@@ -15,8 +15,35 @@
   background-repeat: no-repeat;
   background-position: left 0% bottom 0%;
 
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/hero/dots-s@2x-min.png');
+  }
+
   @media screen and (min-width: 768px) {
     height: 349px;
+    background-image: url('../images/hero/dots-m-min.png');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/hero/dots-m@2x-min.png');
+    }
+
+    @media screen and (min-width: 1200px) {
+      height: 591px;
+      background-image: url('../images/hero/dots-l-min.png');
+
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/hero/dots-l@2x-min.png');
+      }
+    }
   }
 }
 
@@ -29,7 +56,7 @@
   padding-top: 60px;
 
   @media screen and (min-width: 768px) {
-    top: 8%;
+    padding-top: 40px;
     width: 181px;
   }
   // @media screen and (min-width: 1200px) {
@@ -72,6 +99,7 @@
   display: flex;
   flex-direction: row;
   gap: 8px;
+  padding-bottom: 28px;
   z-index: 10;
 }
 
@@ -114,15 +142,90 @@
 }
 
 // =================================================
+//                    Hero Plate Section
+// =================================================
+.hero__plate-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__plate {
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 33px;
+  width: 337px;
+  transform: translateX(-100%);
+  overflow: hidden;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+// .hero__plate-icecream {
+//   width: 152px;
+// }
+
+.hero__plate-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+  gap: 20px;
+
+  width: 151px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+
+  color: $SecondaryWhiteColor;
+  fill: $SecondaryWhiteColor;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    animation-name: slide-right;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    // animation-fill-mode: forwards;
+  }
+}
+
+.hero__plate-arrow {
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-180px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+// =================================================
 //                    Hero Picture
 // =================================================
 
 .hero__bg {
+  min-width: 276px;
+  min-height: 273px;
+
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 53%;
   transform: translateX(-50%);
   z-index: 5;
+
+  @media screen and (min-width: 768px) {
+    left: 73%;
+    min-width: 397px;
+    min-height: 379px;
+  }
 }
 
 // ===========================================

@@ -6,16 +6,47 @@
       </h1>
 
       <div class="hero__buttons">
-        <a
-          class="single-button__1 hero__single-button"
-          href="#section__products"
-        >
+        <a class="single-button__1 hero__single-button" href="#product_section">
           Products
         </a>
 
         <a class="hero__single-button single-button__2" href="#section__about">
           How it’s made?
         </a>
+      </div>
+      <div class="hero__plate-thumb">
+        <div class="hero__plate">
+          <picture class="hero__plate-icecream">
+            <source
+              media="(min-width: 1200px)"
+              srcset="
+                images/hero/plate-l-min.png    1x,
+                images/hero/plate-l@2x-min.png 2x
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                images/hero/plate-m-min.png    1x,
+                images/hero/plate-m@2x-min.png 2x
+              "
+            />
+
+            <img
+              class="hero__plate-icecream2"
+              src="images/hero/plate-l-min.png"
+              alt="Тарілка з морозивом - ілюстрація до опису"
+              loading="lazy"
+            />
+          </picture>
+          <div class="hero__plate-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+            <svg class="hero__plate-arrow" fill="currentColor">
+              <use href="images/icons.svg#icon-arrow__default"></use>
+            </svg>
+          </div>
+        </div>
       </div>
     </div>
 

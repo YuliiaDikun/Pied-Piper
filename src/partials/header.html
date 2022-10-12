@@ -1,12 +1,35 @@
 <header class="header">
   <div class="header__container container">
     <div class="header__logo">
-      <a href="#" class="header__icecream">
-        <img
-          src="images/logo/Logo-l-min.png"
-          alt="Головний логотип сайту - морозиво"
+      <picture class="header__icecream">
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            images/logo/Logo-l-min.png    1x,
+            images/logo/Logo-l@2x-min.png 2x
+          "
         />
-      </a>
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            images/logo/Logo-m-min.png    1x,
+            images/logo/Logo-m@2x-min.png 2x
+          "
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            images/logo/Logo-s-min.png    1x,
+            images/logo/Logo-s@2x-min.png 2x
+          "
+        />
+        <img
+          src="images/logo/Logo-s-min.png"
+          alt="Логотип сайту - морозиво"
+          loading="lazy"
+        />
+      </picture>
+
       <!-- <div class="header__logo">main logo</div> -->
     </div>
 
@@ -20,6 +43,15 @@
       </svg>
     </button>
 
-    <button class="header__buy" type="button">Buy now</button>
+    <button class="header__buy" type="button">
+      Buy now<svg
+        class="button-contacts__icon"
+        width="12"
+        height="12"
+        fill="currentColor"
+      >
+        <use href="images/icons.svg#icon-greater"></use>
+      </svg>
+    </button>
   </div>
 </header>

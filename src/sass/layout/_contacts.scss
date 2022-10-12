@@ -1,11 +1,11 @@
 .contacts {
-  background: linear-gradient(#fff 365px, $BackgroundMainColor 0 100%);
+  background: linear-gradient(transparent 365px, $BackgroundMainColor 0 100%);
   padding-bottom: 40px;
   @include media('tablet') {
-    background: linear-gradient(#fff 310px, $BackgroundMainColor 0 100%);
+    background: linear-gradient(transparent 310px, $BackgroundMainColor 0 100%);
   }
   @include media('desktop') {
-    background: linear-gradient(#fff 96px, $BackgroundMainColor 0 100%);
+    background: linear-gradient(transparent 96px, $BackgroundMainColor 0 100%);
   }
 }
 

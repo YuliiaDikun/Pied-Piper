@@ -113,7 +113,7 @@
     close(firstModal);    
   });
   refs.closeModalSecondBtn.addEventListener("click", function() {
-    const secondModal = refs.modalLocation;
+    const secondModal = refs.modalFranchise;    
     close(secondModal);    
   }); 
 

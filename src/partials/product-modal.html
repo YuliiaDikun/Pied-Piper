@@ -1,70 +1,136 @@
-<div class="product-modal-container js-product-menu-container" id="product-modal">
+<div js-product-menu-container class="backdrop backdrop--is-hidden">
+    <div class="modal modal-product" id="product-modal">
+      <button js-product-close-menu class="button button--close">
+        <svg class="modal-icon" fill="currentColor">
+          <use href="images/icons.svg#icon-close__modal"></use>
+        </svg>
+      </button>
+
     
-    <h2>Chololate 
-        icecream</h2>
+    <h2 class="ingradient__title">Chololate icecream</h2>
     
+       <div class="ingradient__picture">
         <picture>
-            <source srcset="images/products/product-modal-ice.png 1x, images/products/product-modal-ice-@2.png 2x" type="image/png"/>
-            <img
-            src="images/product/product-modal-ice.png"
-            class="product__icecream"
+            <source srcset="images/products/product-modal-ice.png 1x, images/products/product-modal-ice-@2.png 2x"/>
+            <img 
+            src="images/products/product-modal-ice.png"
+            class="ingradient__image"
             alt="product ice-cream"
             loading="lazy"
             />
         </picture>
+      </div>
     
     
-        <ul>
-            <li>
-                <div>
-                    <p>320</p>
-                </div>
-                
+        <ul class="ingradient__properties">
+            <li class="ingradient__properties-item">
+              <div class="ingradient__properties-weight">
+                  <p>320</p>
+              </div>
                 <p>kcal</p>
+            </li>
 
+            <li class="ingradient__properties-item">
+              <div class="ingradient__properties-weight">
+                <p>4g</p>
+              </div>
+              <p>Prote...</p>
+            </li>
+
+            <li class="ingradient__properties-item">
+              <div class="ingradient__properties-weight">
+                <p>8,2g</p>
+              </div>
+              <p>Fats</p>
+            </li>
+
+            <li class="ingradient__properties-item">
+              <div class="ingradient__properties-weight">
+                <p>40,4g</p>
+              </div>
+              <p>Carbs</p>
             </li>
 
         </ul>
 
 
-        <strong>ingredients</strong>
+        <p  class="ingradient__list-title"><strong>Ingredients</strong></p>
 
 
-        <ul>
-            <li> 
+        <ul class="ingradient__list">
+            <li class="ingradient__item"> 
                 <p>Milk</p>
                 <p>100ml</p>
             <li>
 
-            <li> 
+              <li class="ingradient__item"> 
                 <p>Belgian chocolate</p>
                 <p>120g</p>
             <li>
             
-            <li> 
+              <li class="ingradient__item"> 
                 <p>Cream</p>
                 <p>150ml</p>
             <li>
 
-            <li> 
+              <li class="ingradient__item"> 
                 <p>Cocoa powder</p>
                 <p>30g</p>
             <li>
             
-            <li> 
+              <li class="ingradient__item">  
                 <p>Sugar</p>
                 <p>40g</p>
             <li>
             
-            <li> 
+              <li class="ingradient__item"> 
                 <p>Vanilla sugar</p>
                 <p>10g</p>
             <li>
-
         </ul>
 
 
-<div>
+        <form autocomplete="off" class="modal-Ingredients__form">
+            <div class="modal-Ingredients__wrapper">
+              <label lass="modal-form__label" for="user-name">
+                <input
+                  class="ingradient-form__input"
+                  id="user-name"
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                />
+              </label>
+            </div>
+      
+            <div class="modal-Ingredients__wrapper">
+              <label class="modal-form__label" for="user-phone">
+                <input
+                  id="user-phone"
+                  class="ingradient-form__input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone"
+                />
+              </label>
+            </div>
+      
+            <div class="modal-Ingredients__wrapper">
+              <label class="modal-form__label" for="user-coment">
+                <textarea
+                  id="user-coment"
+                  class="ingradient-form__textarea"
+                  name="coment"
+                  rows="7"
+                  placeholder="Comment"
+                ></textarea>
+              </label>
+            </div>
+        
+      <button type="submit" class="modal-franchise__btn">Submit</button>
+    </form>
+  </div>
+</div>
 
 
     

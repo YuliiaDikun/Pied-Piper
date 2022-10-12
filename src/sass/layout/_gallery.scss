@@ -1,9 +1,5 @@
 .gallery {
   padding-bottom: 128px;
-}
-.gallery__section {
-  margin-top: -1px;
-
   background-image: linear-gradient(
     to bottom,
     $BackgroundMainColor 0px 25px,
@@ -24,6 +20,9 @@
       transparent 100px
     );
   }
+}
+.gallery__section {
+  margin-top: -1px;
 }
 
 .gallery__box {

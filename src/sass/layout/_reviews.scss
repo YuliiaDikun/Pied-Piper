@@ -1,6 +1,6 @@
 .review {
   padding-bottom: 48px;
-  background-color: $WhiteIconColor;
+  background-color: transparent;
   // ----tablet-----------
   @include media('tablet') {
     padding-bottom: 80px;

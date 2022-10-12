@@ -3,4 +3,36 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   letter-spacing: 0.04em;
+  background-image: url('../images/bg/prod/bg-prod-s-min.png');
+  background-repeat: repeat;
+  background-size: contain;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/bg/prod/bg-prod-s@2x-min.png');
+  }
+
+  @include media('tablet') {
+    background-image: url('../images/bg/prod/bg-prod-m-min.png');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/bg/prod/bg-prod-m@2x-min.png');
+    }
+  }
+
+  @include media('desktop') {
+    background-image: url('../images/bg/prod/bg-prod-l-min.png');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/bg/prod/bg-prod-l@2x-min.png');
+    }
+  }
 }

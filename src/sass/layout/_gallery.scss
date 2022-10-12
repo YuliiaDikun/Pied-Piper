@@ -1,0 +1,90 @@
+.gallery__section {
+  margin-top: -1px;
+
+  background-image: linear-gradient(
+    to bottom,
+    $BackgroundMainColor 0px 25px,
+    transparent 25px
+  );
+
+  @include media('tablet') {
+    background-image: linear-gradient(
+      to bottom,
+      $BackgroundMainColor 0px 165px,
+      transparent 165px
+    );
+  }
+  @include media('desktop') {
+    background-image: linear-gradient(
+      to bottom,
+      $BackgroundMainColor 0px 100px,
+      transparent 100px
+    );
+  }
+}
+
+.gallery__box {
+  position: relative;
+  width: 280px;
+  height: 130px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 18px;
+
+  @include media('tablet') {
+    width: 700px;
+    height: 330px;
+  }
+
+  @include media('desktop') {
+    width: 1015px;
+    height: 420px;
+  }
+}
+
+.image__icecream {
+  position: absolute;
+
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  object-fit: cover;
+  object-position: center;
+  animation-name: Icecream;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 15000ms;
+  animation-fill-mode: both;
+  animation-delay: calc(var(--shift) * 5000ms);
+}
+
+@keyframes Icecream {
+  0% {
+    opacity: 0;
+  }
+  7% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.image__icecream:nth-of-type(3) {
+  object-position: 0px -56px;
+
+  @include media('tablet') {
+    object-position: 0px -106px;
+  }
+
+  @include media('desktop') {
+    object-position: 0px -200px;
+  }
+}

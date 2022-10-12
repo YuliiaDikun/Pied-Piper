@@ -51,7 +51,7 @@
 //                  Hero Title
 // ==============================================
 .hero__content {
-  // position: absolute;
+  position: relative;
   // top: 13%;
   padding-top: 60px;
 
@@ -83,7 +83,7 @@
 
   @media screen and (min-width: 1200px) {
     @include font(400, 38px, 48px);
-    margin-bottom: 20px;
+    margin-bottom: 28px;
     max-width: 367px;
   }
 }
@@ -108,8 +108,18 @@
   display: flex;
   flex-direction: row;
   gap: 8px;
-  padding-bottom: 28px;
+  padding-bottom: 20px;
   z-index: 10;
+
+  @media screen and (min-width: 768px) {
+    // @include font(400, 38px, 48px);
+    padding-bottom: 28px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    // @include font(400, 38px, 48px);
+    padding-bottom: 42px;
+  }
 }
 
 .hero__single-button {
@@ -162,66 +172,68 @@
 // =================================================
 //                    Hero Plate Section
 // =================================================
+
+// .hero__plate-thumb {
+//   outline: 2px solid yellow;
+//   @media screen and (max-width: 767px) {
+//     display: none;
+//   }
+//   position: relative;
+// }
+
 @keyframes slide-right {
   0% {
-    // transform: translateX(-180px);
-    transform: translateX(0);
+    transform: translateX(-32px);
   }
   100% {
-    transform: translateX(101%);
+    transform: translateX(0);
   }
-}
-
-.hero__plate-thumb {
-  position: relative;
-  // overflow: hidden;
 }
 
 .hero__plate-block {
-  position: absolute;
-
   display: flex;
-  flex-direction: row;
   gap: 33px;
-  width: 337px;
-  margin-left: 32px;
 
-  // left: -180px;
-  left: -100%;
-  // top: 200px;
-
-  @media screen and (max-width: 767px) {
-    display: none;
+  @media screen and (min-width: 1200px) {
+    gap: 14px;
   }
 }
 
 .hero__plate-icecream {
-  @media screen and (min-width: 768px) {
-    animation-name: slide-right;
-    animation-delay: 2s;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-  }
+  transform: translateX(-32px);
+
+  animation-name: slide-right;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
 .hero__plate-text {
   display: flex;
+  justify-content: flex-end;
   flex-direction: column;
-  justify-content: center;
   gap: 20px;
 
   width: 151px;
 
+  font-family: 'Montserrat';
   @include font(400, 12px, 17px);
 
   color: $SecondaryWhiteColor;
   fill: $SecondaryWhiteColor;
 
-  @media screen and (min-width: 768px) {
-    animation-name: slide-right;
-    animation-delay: 1.5s;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+  transform: translateX(-32px);
+
+  animation-name: slide-right;
+  animation-delay: 1.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+    @include font(400, 14px, 20px);
+    width: 220px;
+    padding-top: 30px;
   }
 
   & .products__button {
@@ -232,16 +244,8 @@
   }
 }
 
-// .hero__plate-arrow {
-//   // width: 40px;
-//   // height: 20px;
-//   // cursor: pointer;
-//   margin-left: 0;
-//   fill: #fff;
-// }
-
 // =================================================
-//                    Hero Picture
+//                Hero Main Picture
 // =================================================
 
 .hero__bg {
@@ -255,9 +259,15 @@
   z-index: 5;
 
   @media screen and (min-width: 768px) {
-    left: 73%;
+    left: 71%;
     min-width: 397px;
     min-height: 379px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    left: 73%;
+    min-width: 664px;
+    min-height: 642px;
   }
 }
 
@@ -274,8 +284,11 @@
     display: block;
     margin-top: 28px;
     position: absolute;
-    // right: 32px;
+
     right: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 56px;
   }
 
   &__content {
@@ -293,7 +306,7 @@
     }
 
     @media screen and (min-width: 1200px) {
-      margin-right: 20px;
+      // margin-right: 20px;
       background-size: 30px;
     }
 
@@ -307,24 +320,38 @@
     0% {
       transform: translateX(0);
     }
+
     100% {
-      transform: translateX(-30px);
+      transform: translateX(-32px);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    @keyframes slide-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-20);
+      }
     }
   }
 
   &__content:first-child {
     margin-bottom: 20px;
 
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
+    @media screen and (min-width: 768px) {
       animation-name: slide-left;
       animation-duration: 2s;
       animation-delay: 0.5s;
       animation-fill-mode: forwards;
     }
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 16px;
+    }
   }
 
   &__content:last-child {
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
+    @media screen and (min-width: 768px) {
       animation-name: slide-left;
       animation-delay: 1s;
       animation-duration: 2s;

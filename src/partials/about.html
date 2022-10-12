@@ -26,7 +26,12 @@
               images/about/cow-s@2x-min.png 2x
             "
           />
-          <img src="images/about/cow-s-min.png" alt="cow" class="about__img" />
+          <img
+            src="images/about/cow-s-min.png"
+            alt="cow"
+            class="about__img"
+            loading="lazy"
+          />
         </picture>
       </div>
       <div class="about__description">
@@ -46,12 +51,7 @@
         </p>
         <button type="button" class="about__btn">
           Read more
-          <svg
-            class="read-more-btn__icon"
-            width="12"
-            height="12"
-            fill="currentColor"
-          >
+          <svg class="about__icon" width="12" height="12" fill="currentColor">
             <use href="images/icons.svg#icon-greater"></use>
           </svg>
         </button>

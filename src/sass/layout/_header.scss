@@ -7,14 +7,11 @@
   align-items: center;
   padding-top: 12px;
   padding-bottom: 1px;
-
-  @media screen and (min-width: 768px) {
+  @include media('tablet') {
     padding-top: 20px;
   }
-
-  @media screen and (min-width: 1200px) {
+  @include media('desktop') {
     padding-top: 18px;
-    padding-left: 16px;
   }
 }
 
@@ -25,22 +22,20 @@
 .header__nav {
   display: flex;
   margin-left: 265px;
-
-  @media screen and (max-width: 1199px) {
+  @include media('desktop', max) {
     display: none;
   }
 }
 
-.header__nav-list {
+.header__list {
   display: flex;
-  flex-direction: row;
   gap: 27px;
+  z-index: 50;
 }
-.header__nav-item a {
-  // justify-content: center;
-  // align-items: center;
+.header__link {
   @include font(700, 16px, 20px);
   color: $SecondaryWhiteColor;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     color: $AccentColor;
@@ -69,9 +64,11 @@
   border-radius: 10px;
   background-color: $AccentColor;
   z-index: 25;
-
+  cursor: pointer;
   @include font(600, 14px, 17px);
-
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
   @media screen and (max-width: 767px) {
     display: none;
   }
@@ -95,6 +92,9 @@
   }
   &:hover {
     background-color: $HoverButtonColor;
+  }
+  &:disabled {
+    background-color: $disabled;
   }
 }
 

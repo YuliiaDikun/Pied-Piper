@@ -1,0 +1,82 @@
+.review {
+  padding-bottom: 48px;
+  background-color: transparent;
+  // ----tablet-----------
+  @include media('tablet') {
+    padding-bottom: 80px;
+  }
+  // ---------desktop----------
+  @include media('desktop') {
+    padding-bottom: 100px;
+  }
+}
+
+.swiper-wrapper {
+  padding-bottom: 30px;
+  // ----tablet--and--far-------
+  @include media('tablet') {
+    padding-bottom: 45px;
+  }
+}
+.swiper-slide {
+  @include flex(flex, center, center, column);
+  padding: 0 5px;
+  height: auto;
+}
+.swiper-img {
+  margin-bottom: 32px;
+  // -------tablet--------
+  @include media('tablet') {
+    margin-bottom: 28px;
+  }
+  // -----------desktop----------
+  @include media('desktop') {
+    margin-bottom: 32px;
+  }
+}
+.swiper-review {
+  max-width: 280px;
+  border-radius: 10px;
+  padding: 34px 34px;
+  text-align: center;
+  flex-grow: 1;
+
+  background-color: $BackgroundMainColor;
+  color: $SecondaryWhiteColor;
+
+  @include font(400, 12px, 31px);
+  // ----------tablet--------
+  @include media('tablet') {
+    max-width: 705px;
+    @include font(500, 14px, 26px);
+    letter-spacing: 0.04em;
+    padding: 29px 80px;
+  }
+  // -----------desktop--------------
+  @include media('desktop') {
+    @include font(500, 16px, 30px);
+    padding: 39px 73px;
+  }
+}
+.swiper-info {
+  margin-top: 30px;
+  text-align: center;
+
+  @include font(500, 20px, 37px);
+
+  color: $PrimaryTextColor;
+  // ------tablet-------------
+  @include media('tablet') {
+    @include font(500, 16px, 30px);
+  }
+}
+// ----------------bullets------------------------
+.swiper .swiper-pagination-bullet-active {
+  background-color: $BackgroundMainColor;
+}
+.swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+
+  background-color: $BackgroundMainColor;
+}

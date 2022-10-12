@@ -1,14 +1,56 @@
-<section class="hero__section container">
-  <h1 class="hero__title">
-    Ice cream made with <span class="hero__passion">passion</span>
-  </h1>
+<section class="hero">
+  <div class="hero__container container">
+    <div class="hero__content">
+      <h1 class="hero__title">
+        Ice cream made with <span class="hero__passion">passion</span>
+      </h1>
 
-  <div class="hero__buttons">
-    <button class="hero__single-button single-button__1">
-      <p class="button__text">Products</p>
-    </button>
-    <button class="hero__single-button single-button__2">
-      <p>How it’s made?</p>
-    </button>
+      <div class="hero__buttons">
+        <a
+          class="single-button__1 hero__single-button"
+          href="#section__products"
+        >
+          Products
+        </a>
+
+        <a class="hero__single-button single-button__2" href="#section__about">
+          How it’s made?
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__bg">
+      <picture class="hero__image">
+        <source
+          media="(min-width: 1200px)"
+          srcset="images/hero/ice-l-min.png 1x, images/hero/ice-l@2x-min.png 2x"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="images/hero/ice-m-min.png 1x, images/hero/ice-m@2x-min.png 2x"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="images/hero/ice-s-min.png 1x, images/hero/ice-s@2x-min.png 2x"
+        />
+
+        <img
+          class="hero__icecream"
+          src="images/hero/ice-s-min.png"
+          alt="Головне зображення сайту - морозиво"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+    <div class="retail">
+      <div class="retail__content slide-left">
+        <p class="retail__number">16</p>
+        <p class="retail__type">cafes</p>
+      </div>
+      <div class="retail__content slide-left2">
+        <p class="retail__number">23</p>
+        <p class="retail__type">food trucks</p>
+      </div>
+    </div>
   </div>
 </section>

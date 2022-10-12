@@ -1,0 +1,83 @@
+.modal-franchise {
+  min-width: 280px;
+  min-height: 674px;
+  text-align: center;
+  border: 2px solid $AccentColor;
+  border-radius: 10px;
+  @include media('tablet') {
+    padding: 32px 60px;
+    width: 568px;
+  }
+}
+
+.modal-franchise__subtitle {
+  font-size: 15px;
+  margin-bottom: 20px;
+  @include media('tablet') {
+    @include font(400, 20px, 28px);
+    width: 322px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+}
+
+.modal-franchise__descr {
+  font-family: 'Montserrat';
+  text-align: left;
+  @include font(400, 13px, 20px);
+  color: $PrimaryTextColor;
+  @include media('tablet') {
+    @include font(400, 15px, 22px);
+  }
+}
+
+.modal-franchise__form {
+  margin-top: 24px;
+  @include media('tablet') {
+    margin-top: 32px;
+  }
+}
+
+.modal-franchise__wrapper:not(:last-child) {
+  margin-bottom: 12px;
+  @include media('tablet') {
+    margin-bottom: 16px;
+  }
+}
+
+.modal-form__input,
+.modal-form__textarea {
+  padding: 8px 12px;
+  width: 224px;
+  height: 32px;
+  background-color: rgba(248, 210, 78, 0.1);
+  border: 1px solid $BackgroundMainColor;
+  border-radius: 10px;
+  color: $BackgroundMainColor;
+  @include media('tablet') {
+    width: 368px;
+    height: 42px;
+  }
+}
+
+.modal-form__textarea {
+  height: 64px;
+  resize: none;
+  @include media('tablet') {
+    height: 84px;
+  }
+}
+
+.modal-franchise__btn {
+  margin-top: 12px;
+  padding: 12px 34px;
+  background-color: $AccentColor;
+  border-radius: 10px;
+  @include font(600, 12px, 15px);
+  color: $PrimaryTextColor;
+  cursor: pointer;
+  @include media('tablet') {
+    margin-top: 16px;
+    @include font(600, 14px, 17px);
+  }
+}

@@ -67,7 +67,9 @@
   &:focus {
     background-color: $HoverButtonColor;
     color: $SecondaryWhiteColor;
-    fill: $SecondaryWhiteColor;
+    & .button-contacts__icon {
+      stroke: $SecondaryWhiteColor;
+    }
   }
   &:hover {
     background-color: $HoverButtonColor;

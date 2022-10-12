@@ -1,5 +1,11 @@
 .about {
-  background-color: $BackgroundMainColor;
+  background: rgb(0, 212, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(191, 221, 180, 1) 0%,
+    rgba(132, 162, 120, 1) 100%
+  );
   padding-bottom: 43px;
   padding-top: 60px;
   text-align: center;
@@ -70,6 +76,10 @@
     font-family: 'Seymour One';
     margin-top: 12px;
     text-transform: uppercase;
+    background: linear-gradient(to right, #43a047, #eeff41, #f9a825, #ff5722);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     @include font(400, 30px, 38px);
     @include media('tablet') {
       @include font(400, 34px, 43px);
@@ -113,6 +123,11 @@
     }
   }
   &__picture {
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
     @include media('tablet') {
       width: 336px;
     }
@@ -124,6 +139,7 @@
     @include font(400, 12px, 19px);
     padding-top: 4px;
     text-align: left;
+
     &:not(:first-child) {
       margin-bottom: 20px;
     }
@@ -144,5 +160,19 @@
         display: block;
       }
     }
+  }
+}
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
   }
 }

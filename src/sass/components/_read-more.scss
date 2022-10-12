@@ -1,7 +1,7 @@
 .modal-read-more {
   max-width: 280px;
   border-radius: 10px;
-  border: 1px solid $AccentColor;
+  border: 2px solid $AccentColor;
   //   tablet
   @include media('tablet') {
     max-width: 568px;

@@ -1,0 +1,136 @@
+<div js-product-menu-container class="backdrop backdrop--is-hidden">
+    <div class="modal-product" id="product-modal">
+      <button js-product-close-menu class="button button--close">
+        <svg class="modal-icon" fill="currentColor">
+          <use href="images/icons.svg#icon-close__modal"></use>
+        </svg>
+      </button>
+
+    
+    <h2 class="ingredient__title">Chololate icecream</h2>
+    
+       <div class="ingredient__picture">
+        <picture>
+            <source srcset="images/products/product-modal-ice.png 1x, images/products/product-modal-ice-@2.png 2x"/>
+            <img 
+            src="images/products/product-modal-ice.png"
+            class="ingredient__image"
+            alt="product ice-cream"
+            loading="lazy"
+            />
+        </picture>
+      </div>
+    
+    
+        <ul class="ingredient__properties-list">
+            <li class="ingredient__properties-item">
+              <div class="ingredient__properties-weight">
+                  <p>320</p>
+              </div>
+                <p class="ingredient__properties-description">kcal</p>
+            </li>
+
+            <li class="ingredient__properties-item">
+              <div class="ingredient__properties-weight">
+                <p>4g</p>
+              </div>
+              <p class="ingredient__properties-description">Prote...</p>
+            </li>
+
+            <li class="ingredient__properties-item">
+              <div class="ingredient__properties-weight">
+                <p>8,2g</p>
+              </div>
+              <p class="ingredient__properties-description">Fats</p>
+            </li>
+
+            <li class="ingredient__properties-item">
+              <div class="ingredient__properties-weight">
+                <p>40,4g</p>
+              </div>
+              <p class="ingredient__properties-description">Carbs</p>
+            </li>
+
+        </ul>
+
+
+        <p  class="ingredient__list-title">Ingredients</p>
+
+
+        <ul class="ingredient__list">
+            <li class="ingredient__item"> 
+                <p>Milk</p>
+                <p>100ml</p>
+            <li>
+
+              <li class="ingredient__item"> 
+                <p>Belgian chocolate</p>
+                <p>120g</p>
+            <li>
+            
+              <li class="ingredient__item"> 
+                <p>Cream</p>
+                <p>150ml</p>
+            <li>
+
+              <li class="ingredient__item"> 
+                <p>Cocoa powder</p>
+                <p>30g</p>
+            <li>
+            
+              <li class="ingredient__item">  
+                <p>Sugar</p>
+                <p>40g</p>
+            <li>
+            
+              <li class="ingredient__item"> 
+                <p>Vanilla sugar</p>
+                <p>10g</p>
+            <li>
+        </ul>
+
+
+        <form autocomplete="off" class="modal-Ingredients__form">
+            <div class="modal-Ingredients__wrapper">
+              <label lass="modal-form__label" for="user-name">
+                <input
+                  class="ingredient-form__input"
+                  id="user-name"
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                />
+              </label>
+            </div>
+      
+            <div class="modal-Ingredients__wrapper">
+              <label class="modal-form__label" for="user-phone">
+                <input
+                  id="user-phone"
+                  class="ingredient-form__input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone"
+                />
+              </label>
+            </div>
+      
+            <div class="modal-Ingredients__wrapper">
+              <label class="modal-form__label" for="user-coment">
+                <textarea
+                  id="user-coment"
+                  class="ingredient-form__textarea"
+                  name="coment"
+                  rows="7"
+                  placeholder="Comment"
+                ></textarea>
+              </label>
+            </div>
+        
+      <button type="submit" class="modal-ingredients__btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+    

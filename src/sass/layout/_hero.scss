@@ -290,7 +290,7 @@
   &__content {
     // display: block;
     animation-name: slide-left;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
 
     &:first-child {
       margin-bottom: 20px;
@@ -317,10 +317,12 @@
   @keyframes slide-left {
     0% {
       transform: translateX(0);
+      opacity: 0;
     }
 
     100% {
       transform: translateX(-32px);
+      opacity: 1;
     }
   }
 

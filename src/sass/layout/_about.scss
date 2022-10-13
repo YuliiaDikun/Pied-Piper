@@ -122,6 +122,8 @@
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     margin-bottom: 40px;
     margin-top: 31px;
+    margin-left: auto;
+    margin-right: auto;
     transform: translatey(0px);
     animation: float 6s ease-in-out infinite;
     width: 280px;
@@ -139,7 +141,7 @@
   &__text {
     @include font(400, 12px, 19px);
     padding-top: 4px;
-    text-align: left;
+    text-align: center;
 
     &:not(:first-child) {
       margin-bottom: 20px;

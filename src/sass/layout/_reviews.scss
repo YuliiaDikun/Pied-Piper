@@ -54,6 +54,7 @@
   }
   // -----------desktop--------------
   @include media('desktop') {
+    max-width: 968px;
     @include font(500, 16px, 30px);
     padding: 39px 73px;
   }

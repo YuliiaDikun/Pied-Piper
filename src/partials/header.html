@@ -1,13 +1,36 @@
 <header class="header">
   <div class="header__container container">
     <div class="header__logo">
-      <a href="#" class="header__icecream">
+      <picture class="header__icecream">
+        <source
+          srcset="
+            images/logo/Logo-l-min.png    1x,
+            images/logo/Logo-l@2x-min.png 2x
+          "
+        />
         <img
           src="images/logo/Logo-l-min.png"
-          alt="Головний логотип сайту - морозиво"
+          alt="Site logo - icecream"
+          loading="lazy"
         />
-      </a>
-      <!-- <div class="header__logo">main logo</div> -->
+      </picture>
+    </div>
+
+    <div class="header__nav">
+      <ul class="header__list">
+        <li class="header__item">
+          <a href="#hero" class="header__link">Home</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#about" class="header__link">How it’s made?</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#product_section" class="header__link">Our products</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#contacts" class="header__link">Contact</a>
+        </li>
+      </ul>
     </div>
 
     <button
@@ -20,6 +43,15 @@
       </svg>
     </button>
 
-    <button class="header__buy" type="button">Buy now</button>
+    <button class="header__buy" type="button">
+      Buy now<svg
+        class="button-contacts__icon"
+        width="12"
+        height="12"
+        fill="currentColor"
+      >
+        <use href="images/icons.svg#icon-greater"></use>
+      </svg>
+    </button>
   </div>
 </header>

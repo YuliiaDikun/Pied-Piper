@@ -2,6 +2,9 @@
   background-color: $BackgroundMainColor;
 
   padding-bottom: 62px;
+  @include media('tablet') {
+    padding-bottom: 14px;
+  }
 }
 .footer-banner {
   text-transform: uppercase;
@@ -93,6 +96,12 @@
 .copyright {
   border-top: 1px solid $BorderColor;
   padding-top: 16px;
+  @include media('tablet') {
+    padding-top: 14px;
+  }
+  @include media('desktop') {
+    padding-top: 12px;
+  }
 
   &__text {
     @include font(700, 14px, 21px);

@@ -1,4 +1,4 @@
-<section class="hero">
+<section class="hero" id="hero">
   <div class="hero__container container">
     <div class="hero__content">
       <h1 class="hero__title">
@@ -6,16 +6,47 @@
       </h1>
 
       <div class="hero__buttons">
-        <a
-          class="single-button__1 hero__single-button"
-          href="#section__products"
-        >
-          Products
-        </a>
+        <a class="hero__button" href="#product_section"> Products </a>
 
-        <a class="hero__single-button single-button__2" href="#section__about">
+        <a class="hero__button hero__button--no-border" href="#about">
           How it’s made?
         </a>
+      </div>
+      <div class="hero__plate-thumb">
+        <div class="hero__plate-block">
+          <picture class="hero__plate-icecream">
+            <source
+              media="(min-width: 1200px)"
+              srcset="
+                images/hero/plate-l-min.png    1x,
+                images/hero/plate-l@2x-min.png 2x
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                images/hero/plate-m-min.png    1x,
+                images/hero/plate-m@2x-min.png 2x
+              "
+            />
+
+            <img
+              class="hero__plate-icecream2"
+              src="images/hero/plate-m-min.png"
+              alt="Plate with icecream - illustration of the description"
+              loading="lazy"
+            />
+          </picture>
+          <div class="hero__plate-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+            <button type="submit" class="products__button">
+              <svg class="array__icon hero__plate-arrow" fill="currentColor">
+                <use href="images/icons.svg#icon-arrow__default"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -37,17 +68,17 @@
         <img
           class="hero__icecream"
           src="images/hero/ice-s-min.png"
-          alt="Головне зображення сайту - морозиво"
+          alt="Site main image - icecream"
           loading="lazy"
         />
       </picture>
     </div>
     <div class="retail">
-      <div class="retail__content slide-left">
+      <div class="retail__content">
         <p class="retail__number">16</p>
         <p class="retail__type">cafes</p>
       </div>
-      <div class="retail__content slide-left2">
+      <div class="retail__content">
         <p class="retail__number">23</p>
         <p class="retail__type">food trucks</p>
       </div>

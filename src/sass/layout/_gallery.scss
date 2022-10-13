@@ -1,5 +1,5 @@
 .gallery {
-  padding-bottom: 128px;
+  padding-bottom: 80px;
   background-image: linear-gradient(
     to bottom,
     $BackgroundMainColor 0px 25px,
@@ -7,6 +7,7 @@
   );
 
   @include media('tablet') {
+    padding-bottom: 60px;
     background-image: linear-gradient(
       to bottom,
       $BackgroundMainColor 0px 165px,
@@ -14,6 +15,7 @@
     );
   }
   @include media('desktop') {
+    padding-bottom: 128px;
     background-image: linear-gradient(
       to bottom,
       $BackgroundMainColor 0px 100px,

@@ -4,7 +4,7 @@
     openModalSecondBtn: document.querySelector("[data-modal-open-second]"),
     
     // Read more
-
+    openModalAboutBtn: document.querySelector("[data-modal-open-about]"),
     // 
 
     // Buy now
@@ -20,7 +20,7 @@
     closeModalSecondBtn: document.querySelector("[data-modal-close-second]"),
     
     // Read more
-
+    closeModalAboutBtn: document.querySelector("[data-modal-close-about]"),
     // 
 
     // Buy now
@@ -36,7 +36,7 @@
     modalFranchise: document.querySelector("[data-modal-franchise]"),
     
     // Read more
-
+    modalAbout: document.querySelector("[data-modal-about]"),
     //
     
     // Buy now
@@ -71,10 +71,10 @@
   });
 
                         // Read more //
-  // refs.openModalFirstBtn.addEventListener("click", function() {
-  //   const firstModal = refs.modalLocation;
-  //   toggleModal(firstModal);    
-  // });
+  refs.openModalAboutBtn.addEventListener("click", function() {
+    const AboutModal = refs.modalAbout;
+    toggleModal(AboutModal);    
+  });
 
   // refs.openModalSecondBtn.addEventListener("click",  function() {
   //   const secondModal = refs.modalFranchise;
@@ -120,10 +120,10 @@
   }); 
 
                           // Read more
-  // refs.closeModalFirstBtn.addEventListener("click", function() {
-  //   const firstModal = refs.modalLocation;
-  //   close(firstModal);    
-  // });
+  refs.closeModalAboutBtn.addEventListener("click", function() {
+    const AboutModal = refs.modalAbout;
+    close(AboutModal);    
+  });
   // refs.closeModalSecondBtn.addEventListener("click", function() {
   //   const secondModal = refs.modalLocation;
   //   close(secondModal);    

@@ -1,33 +1,52 @@
-// @import './utils/variables';
-
 .header {
   background-color: $BackgroundMainColor;
 }
 
 .header__container {
-  //   position: relative;
   display: flex;
+  align-items: center;
   padding-top: 12px;
   padding-bottom: 1px;
-
-  @media screen and (min-width: 768px) {
+  @include media('tablet') {
     padding-top: 20px;
   }
-
-  @media screen and (min-width: 1200px) {
-    padding-top: 8px;
+  @include media('desktop') {
+    padding-top: 18px;
   }
 }
 
-.header__icecream {
-  width: 40px;
-  height: 37px;
+// ===============================================
+//                  Header Navigation
+// ===============================================
+
+.header__nav {
+  display: flex;
+  margin-left: 265px;
+  @include media('desktop', max) {
+    display: none;
+  }
 }
 
-.menu-toggle {
-  // @include flex(flex, center, center);
-  // margin: 0 0 0 auto;
+.header__list {
+  display: flex;
+  gap: 27px;
+  z-index: 50;
+}
+.header__link {
+  @include font(700, 16px, 20px);
+  color: $SecondaryWhiteColor;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: $AccentColor;
+  }
+}
+// ===============================================
+//                  Header Buttons
+// ===============================================
 
+.menu-toggle {
+  display: flex;
   background-color: transparent;
   cursor: pointer;
   border: none;
@@ -35,24 +54,47 @@
 }
 
 .header__buy {
+  @include flex(flex, center, center);
+
   width: 152px;
   height: 42px;
   margin-left: 32px;
-  // margin-left: auto;
+
   border: none;
   border-radius: 10px;
   background-color: $AccentColor;
   z-index: 25;
-
+  cursor: pointer;
+  @include font(600, 14px, 17px);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
   @media screen and (max-width: 767px) {
     display: none;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+  @media screen and (min-width: 768px) {
     animation-name: slide-left-header;
     animation-duration: 2s;
-    // margin-right: 32px;
     animation-fill-mode: forwards;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
+
+  &:focus {
+    background-color: $HoverButtonColor;
+    color: $SecondaryWhiteColor;
+    & .button-contacts__icon {
+      stroke: $SecondaryWhiteColor;
+    }
+  }
+  &:hover {
+    background-color: $HoverButtonColor;
+  }
+  &:disabled {
+    background-color: $disabled;
   }
 }
 

@@ -73,7 +73,8 @@
   color: $SecondaryWhiteColor;
   text-decoration: none;
   @include font(700, 32px, 39px);
-  &.current {
+  &:hover,
+  &:focus {
     color: $PrimaryTextColor;
   }
 }

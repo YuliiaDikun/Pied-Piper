@@ -1,0 +1,173 @@
+.buy-now {
+  max-width: 280px;
+  border-radius: 10px;
+  border: 2px solid $AccentColor;
+  //   tablet
+  @include media('tablet') {
+    max-width: 568px;
+    padding: 32px 54px;
+  }
+}
+.buy-now__subtitle {
+  margin-bottom: 85px;
+  @include media('tablet') {
+    margin-bottom: 95px;
+  }
+}
+.buy-now__cards {
+  @include flex(flex, center, center, column);
+  gap: 85px;
+  //   tablet
+  @include media('tablet') {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+.buy-now__card {
+  position: relative;
+  @include flex(flex, center, flex-end, column);
+  padding-bottom: 20px;
+  width: 132px;
+  height: 136.4px;
+
+  @include font(700, 16px, 20px);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $PrimaryTextColor;
+
+  filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+  border-radius: 15.7808px;
+  @include media('tablet') {
+    width: 150px;
+  }
+}
+
+.buy-now__card--green {
+  border: 2px solid $BackgroundSecondaryColor;
+}
+.buy-now__card--green::before {
+  content: '';
+
+  position: absolute;
+  top: -55%;
+  left: -23px;
+
+  width: 173px;
+  height: 173px;
+
+  background-image: url('../images/modals/buy-now/buy-now-3@1x-min.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/modals/buy-now/buy-now-3@2x-min.png');
+  }
+}
+
+.buy-now__card--yellow {
+  background-color: $IceCoffeeColor;
+}
+.buy-now__card--yellow::before {
+  content: '';
+
+  position: absolute;
+  top: -55%;
+  left: -21px;
+
+  width: 173px;
+  height: 173px;
+
+  background-image: url('../images/modals/buy-now/buy-now-2@1x-min.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/modals/buy-now/buy-now-2@2x-min.png');
+  }
+}
+
+.buy-now__card--brown {
+  border: 2px solid $MilkshakesColor;
+}
+.buy-now__card--brown::before {
+  content: '';
+
+  position: absolute;
+  top: -55%;
+  left: -23px;
+
+  width: 173px;
+  height: 173px;
+
+  background-image: url('../images/modals/buy-now/buy-now-1@1x-min.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/modals/buy-now/buy-now-1@2x-min.png');
+  }
+}
+// -----------------------------form-----------------------------------
+.buy-now__form {
+  margin-top: 24px;
+  text-align: center;
+  @include media('tablet') {
+    margin-top: 32px;
+  }
+}
+
+.buy-now__wrapper:not(:last-child) {
+  margin-bottom: 12px;
+  @include media('tablet') {
+    margin-bottom: 16px;
+  }
+}
+
+.modal-form__input,
+.modal-form__textarea {
+  padding: 8px 12px;
+  width: 224px;
+  height: 32px;
+  background-color: rgba(248, 210, 78, 0.1);
+  border: 1px solid $BackgroundMainColor;
+  border-radius: 10px;
+  color: $BackgroundMainColor;
+  @include media('tablet') {
+    width: 368px;
+    height: 42px;
+  }
+}
+
+.modal-form__textarea {
+  height: 64px;
+  resize: none;
+  @include media('tablet') {
+    height: 84px;
+  }
+}
+
+.buy-now__btn {
+  margin: 0 auto;
+  margin-top: 12px;
+  padding: 12px 34px;
+  background-color: $AccentColor;
+  border-radius: 10px;
+  @include font(600, 12px, 15px);
+  color: $PrimaryTextColor;
+  cursor: pointer;
+  @include media('tablet') {
+    margin-top: 16px;
+    @include font(600, 14px, 17px);
+  }
+}

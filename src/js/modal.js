@@ -8,7 +8,7 @@
     // 
 
     // Buy now
-
+    openModalBuyBtn: document.querySelector("[data-modal-open-buy]"),
     //
     
     // Ingredients
@@ -24,7 +24,7 @@
     // 
 
     // Buy now
-
+    closeModalBuyBtn: document.querySelector("[data-modal-close-buy]"),
     //
     
     // Ingredients
@@ -40,7 +40,7 @@
     //
     
     // Buy now
-
+    modalBuy: document.querySelector("[data-modal-buy]"),
     //
 
     // Ingredients
@@ -83,10 +83,10 @@
   // 
   
                         // Buy now //
-  // refs.openModalFirstBtn.addEventListener("click", function() {
-  //   const firstModal = refs.modalLocation;
-  //   toggleModal(firstModal);    
-  // });
+  refs.openModalBuyBtn.addEventListener("click", function() {
+    const BuyModal = refs.modalBuy;
+    toggleModal(BuyModal);    
+  });
 
   // refs.openModalSecondBtn.addEventListener("click",  function() {
   //   const secondModal = refs.modalFranchise;
@@ -130,10 +130,10 @@
   // }); 
   
                           // Buy now
-  // refs.closeModalFirstBtn.addEventListener("click", function() {
-  //   const firstModal = refs.modalLocation;
-  //   close(firstModal);    
-  // });
+  refs.closeModalBuyBtn.addEventListener("click", function() {
+    const buyModal = refs.modalBuy;
+    close(buyModal);    
+  });
   // refs.closeModalSecondBtn.addEventListener("click", function() {
   //   const secondModal = refs.modalLocation;
   //   close(secondModal);    

@@ -3,6 +3,7 @@
 }
 
 .header__container {
+  // position: sticky;
   display: flex;
   align-items: center;
   padding-top: 12px;
@@ -36,11 +37,58 @@
   @include font(700, 16px, 20px);
   color: $SecondaryWhiteColor;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    color: $AccentColor;
-  }
+  // &:hover,
+  // &:focus {
+  //   color: $AccentColor;
+  // }
 }
+// ===============================================
+//                  Navbar Effects
+// ===============================================
+.header__nav-item {
+  transition: 0.5s;
+}
+
+.header__link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+// .header__list:hover li a {
+// transform: scale(0.9);
+// opacity: 0.9;
+// filter: blur(5px);
+// }
+
+.header__list li a:hover {
+  transform: scale(1.2);
+  opacity: 1;
+  filter: blur(0);
+  text-decoration: none;
+  color: $AccentColor;
+}
+
+.header__list li a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+.header__list li a:hover:before {
+  transition: transform 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
 // ===============================================
 //                  Header Buttons
 // ===============================================

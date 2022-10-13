@@ -12,8 +12,9 @@
     //
     
     // Ingredients
-
+    openModalIngredientsBtn: document.querySelector("[js-product-open-menu]"),
     //
+
 
     closeModalFirstBtn: document.querySelector("[data-modal-close]"),
     closeModalSecondBtn: document.querySelector("[data-modal-close-second]"),
@@ -27,8 +28,9 @@
     //
     
     // Ingredients
-
+    closeModalIngredientsBtn: document.querySelector("[js-product-close-menu]"),
     //
+
 
     modalLocation: document.querySelector("[data-modal-location]"),
     modalFranchise: document.querySelector("[data-modal-franchise]"),
@@ -42,7 +44,7 @@
     //
 
     // Ingredients
-
+    modalIngredients: document.querySelector("[js-product-menu-container]"),
     //
   };
 
@@ -93,11 +95,11 @@
   //
 
   
-                          // Ingredients //
-  // refs.openModalFirstBtn.addEventListener("click", function() {
-  //   const firstModal = refs.modalLocation;
-  //   toggleModal(firstModal);    
-  // });
+  // Ingredients //
+  refs.openModalIngredientsBtn.addEventListener("click", function() {
+    const firstModal = refs.modalIngredients;
+    toggleModal(firstModal);    
+  });
 
   // refs.openModalSecondBtn.addEventListener("click",  function() {
   //   const secondModal = refs.modalFranchise;
@@ -137,11 +139,13 @@
   //   close(secondModal);    
   // });
   
-                            // Ingredients
-  // refs.closeModalFirstBtn.addEventListener("click", function() {
-  //   const firstModal = refs.modalLocation;
-  //   close(firstModal);    
-  // });
+    // Ingredients
+    refs.closeModalIngredientsBtn.addEventListener("click", function() {
+    const firstModal = refs.modalIngredients;
+    close(firstModal);    
+    });
+
+
   // refs.closeModalSecondBtn.addEventListener("click", function() {
   //   const secondModal = refs.modalLocation;
   //   close(secondModal);    

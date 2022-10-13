@@ -90,25 +90,19 @@
     fill: none;
     margin-left: 5px;
     stroke: $PrimaryTextColor;
-    .mobile__btn:focus & {
-      stroke: $SecondaryWhiteColor;
+    .about__btn:focus & {
+      stroke: $WhiteIconColor;
     }
-    .mobile__btn:disabled & {
+    .about__btn:disabled & {
       stroke: $disabled;
     }
   }
   &__img {
-    margin-top: 31px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
     @include media('tablet') {
       margin-top: 0px;
       margin-bottom: 0;
-      width: 336px;
-    }
-    @include media('desktop') {
-      width: 490px;
     }
   }
   &__logo {
@@ -126,13 +120,20 @@
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    margin-bottom: 40px;
+    margin-top: 31px;
     transform: translatey(0px);
     animation: float 6s ease-in-out infinite;
+    width: 280px;
+    height: 300px;
     @include media('tablet') {
       width: 336px;
+      height: 355px;
+      margin: 0;
     }
     @include media('desktop') {
-      width: 490px;
+      width: 500px;
+      height: 529px;
     }
   }
   &__text {
